@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="de-DE">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Title</title>
+    <link href="css/app.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+</head>
+
+<body class="root">
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="./images/logo.svg" alt="Hi, I am Logo">
+        </div>
+        <!-- Desktop-Nav -->
+        <nav>
+            <ul>
+                <li>
+                    <a class="underlined" href="/#">Jubiläum</a>
+                </li>
+                <li>
+                    <a href="/#">Chronologie</a>
+                </li>
+                <li>
+                    <a href="/#">Leitungen</a>
+                </li>
+                <li>
+                    <a href="/#">Maßschuhe</a>
+                </li>
+                <li>
+                    <a href="/#">Stimmen</a>
+                </li>
+                <li>
+                    <a href="/#">Pflegetipps</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Toggle für Mobile-Nav -->
+        <div class="menue">
+            <a href="#">MENÜ</a>
+        </div>
+        <button class="hamburger">
+            <div class="bar"></div>
+        </button>
+        <!--  
+        <div for="nav-toggle" class="nav-toggle-label">
+            <span class="nav-toggle-span"></span>
+        </div>
+        -->
+    </header>
+
+    <!-- Main -->
+    <main>
+        <!-- Hero Section  -->
+        <section class="hero">
+            <picture class="hero__background">
+                <source media="(min-width: 1920px)" srcset="./images/hero-bild-d.png">
+                <source media="(min-width: 960px)" srcset="./images/hero-bild.png">
+                <img class="hero__bild" src="./images/hero-bild.png" alt="I'm the Logo" />
+            </picture>
+
+            <div class="section hero__container">
+                <div class="hero-infos">
+                    <h1>Schuhmanufaktur Formschön <a href="#">In Bad Godesberg</a></h1>
+                    <h2>Eleganz von Kopf bis Fuß</h2>
+                    <h3>in Bad Godesberg</h3>
+                    <h4 class="hero-h4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                        tempor invidunt
+                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                        dolores et ea rebum.
+                    </h4>
+                    <div class="button button__container">
+                        <p>
+                            <a class="leistung-btn" href="/#">ZU UNSEREN LEISTUNGEN</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- Pfeile für Mobile -->
+                <!-- <div class="scroll-b">
+                    <img src="./images/pfeile-b-l.svg" />
+                    <div class="lines">
+                        <span class="fett-line line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
+                    <img src="./images/pfeile-b-r.svg" />
+                </div> -->
+
+                <!-- Pfeile für Desktop -->
+                <!-- <div class="scroll-w">
+                    <img src="./images/pfeile-w-l.svg" />
+                    <div class="lines">
+                        <span class="fett-line line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
+                    <img src="./images/pfeile-w-r.svg" />
+                </div> 
+                -->
+                <div class="scroll-b">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="53.143" height="37.2" viewBox="0 0 53.143 37.2">
+                        <path d="M20.6,5l3.747,3.747-12.17,12.2H55.143v5.314H12.177l12.2,12.2L20.6,42.2,2,23.6Z" transform="translate(-2 -5)"/>
+                    </svg>
+                    <div class="lines">
+                        <span class="fett-line line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="53.143" height="37.2" viewBox="0 0 53.143 37.2">
+                        <path d="M20.6,5l3.747,3.747-12.17,12.2H55.143v5.314H12.177l12.2,12.2L20.6,42.2,2,23.6Z" transform="translate(-2 -5)"/>
+                    </svg>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>-->
+    <script type="text/javascript" src="js/app.js"></script>
+</body>
+
+</html>
