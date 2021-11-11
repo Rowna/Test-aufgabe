@@ -45,6 +45,11 @@ h3 {
   color: inherit;
 }
 
+picture,
+source {
+  display: contents;
+}
+
 .section {
   padding: $global-p-m;
 }
@@ -53,15 +58,8 @@ h3 {
 }
 .hero {
   display: grid;
-  /* */
-  &__background {
-    grid-area: 1 / 1;
-    object-fit: cover;
-    transform: translate(0em, 33em);
-    z-index: -99;
-    position: fixed;
-  }
-
+  height: 100vh;
+  overflow: hidden;
   &__container {
     position: relative;
     // position: absolute;
@@ -80,7 +78,11 @@ h3 {
     display: none;
   }
   &__bild {
-    transform: translate(0, -27rem);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    grid-area: 1 / 1;
   }
 }
 .container {
