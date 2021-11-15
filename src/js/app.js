@@ -10,5 +10,5 @@ menu_btn.addEventListener('click', function() {
     mobile_menu.classList.toggle('is-active');
 
     // meun_btn2.classList.remove('.menue');
-    console.log("test")
+    // console.log("test")
 });
