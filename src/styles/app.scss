@@ -161,6 +161,54 @@ source {
     box-shadow: 0px 8px 16px #00000029;
   }
 }
+
+.chronology {
+  // margin-right: 3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  & ol {
+    border-left: 2px solid #ada9a7;
+    width: 100vw;
+    height: auto;
+    font-size: 0;
+    padding: 0;
+    transition: all 1s;
+  }
+  & ol li {
+    list-style-type: none;
+    padding: 2px 0;
+  }
+  // Kreise
+  & ol li::before {
+    content: '';
+    position: relative;
+    left: -18px;
+    bottom: 0;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border: solid 18px #ad5f35;
+    border-radius: 50%;
+  }
+  & ol li div {
+    font-family: $ff-primary;
+    width: 70%;
+    margin-left: 3rem;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    white-space: normal;
+    color: $c-secondary;
+  }
+  & .last-p {
+    margin-top: 1rem;
+    font-family: $ff-primary;
+    color: $c-secondary;
+
+  }
+}
+
+
+
 /* 
 .chronology {
   & .info {
@@ -345,38 +393,27 @@ source {
 */
 
   .chronology {
-    white-space: nowrap;
-    overflow: hidden;
     & ol {
-      width: 100vw;
-      font-size: 0;
+      border-left: none;
       padding: 250px 0;
-      transition: all 1s;
-      // padding-top: 1rem;
-      // padding-bottom: 1rem;
     }
     & ol li {
       position: relative;
       display: inline-block;
-      list-style-type: none;
-      width: 360px;
-      height: 1.5px;
+      width: 390px;
+      height: 2.2px;
       background: #5a5755;
     }
-    // & ol li:first-child::before {
-    //   display: none;
-    // }
+    /* 
+    & ol li:first-child::before {
+      display: none;
+    }
     & ol li:last-child {
       width: 480px;
     }
     & ol li:not(:first-child) {
       margin-left: 10px;
-    }
-    /* 
-    & ol li:last-child::after {
-      content: '';
-    }
-    */
+    }*/
     // Die Kreise ausser der letzte
     & ol li:not(:last-child)::after {
       content: "";
@@ -398,13 +435,18 @@ source {
       position: absolute;
       // left: 90%;
       left: -20px;
-      // width: 100%;
-      width: 420px;
+      width: 100%;
       padding: 25px;
       font-size: 1.2rem;
       white-space: normal;
-      color: #000;
-      // background: #c786c4;
+      font-weight: 200;
+    }
+    & ol li div time {
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: $c-secondary;
+      font-family: $ff-primary;
     }
     /* */
     & ol li div::before {
@@ -439,5 +481,12 @@ source {
       border-width: 8px 0 0 8px;
       // border-color: transparent transparent transparent white;
     }
+    & .last-p {
+      display: none;
+    }
   }
+
+
+
+  
 }
