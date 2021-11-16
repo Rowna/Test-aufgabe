@@ -48,8 +48,18 @@ h2 {
   // color: inherit;
 }
 h3 {
-  font-family: $ff-secondary;
+  // font-family: $ff-secondary;
   color: inherit;
+  font-family: $ff-primary;
+  font-weight: 400;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+h4 {
+  font-family: $ff-primary;
+  font-size: 1.5rem;
+  color: inherit;
+  text-align: center;
 }
 p {
   font-family: $ff-primary;
@@ -83,11 +93,11 @@ source {
     display: none;
   }
   &__container h1 {
-    // font: normal normal 64px/90px $ff-h1;
+    text-align: left;
     width: 50%;
   }
   & h3 {
-    font: normal normal 400 20px/48px $ff-primary;
+    text-align: left;
   }
   & h4 {
     display: none;
@@ -134,11 +144,6 @@ source {
   }
   & h1 {
     margin-bottom: 0;
-  }
-  & h3 {
-    font-family: $ff-primary;
-    font-weight: 400;
-    margin-bottom: 2.5rem;
   }
   & p {
     text-align: left;
@@ -238,11 +243,12 @@ source {
   }
 }
 /* Shoes-Section */
-.schuhe {
+.shoes {
   background-color: whitesmoke;
   // margin: 0 auto;
   & h1 {
-    text-align: left;
+    text-align: center;
+    // text-align: left;
     margin-bottom: 0;
   }
   & h3 {
@@ -264,7 +270,6 @@ source {
   & ol li {
     position: relative;
     margin-left: 30px;
-    // padding: 1.5rem 2.5rem;
     font-family: $ff-primary;
     color: $c-secondary;
     align-items: center;
@@ -296,8 +301,51 @@ source {
     font-family: $ff-secondary;
     text-decoration: underline;
   }
-  & .schuhe-box p {
+  & .shoes-box p {
     display: none;
+  }
+  & .shoes-img {
+    display: none;
+  }
+}
+
+/* Words-Section */
+.words {
+  width: 100%;
+  & ol {
+    border-left: none;
+    // padding: 20px 6rem;
+    list-style-type: none;
+  }
+  & ol li div {
+    background-color: rgb(235, 231, 231);
+    padding: 1rem 1.5rem;
+    margin: 4rem 5rem;
+  }
+  & ol li {
+    position: relative;
+  }
+  & ol li div::after {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: rgb(235, 231, 231);
+    height: 42px;
+    width: 100px;
+    right: 110px;
+    bottom: -39px;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+  }
+  & ol li div::before {
+    font-weight: bold;
+    // content: '';
+    content: open-quote open-quote;
+    display: block;
+    position: absolute;
+    font-size: 6rem;
+    color: $c-secondary-1;
+    top: -105px;
+    right: 100px;
   }
 }
 
@@ -431,6 +479,8 @@ source {
 
   /* Chronology-Section */
   .chronology {
+    // padding-top: 4rem;
+    // padding-bottom: 4rem;
     & ol {
       border-left: none;
       padding: 250px 0;
@@ -531,6 +581,9 @@ source {
       justify-content: space-between;
       gap: 50px;
     }
+    & h1 {
+      text-align: left;
+    }
     & h2 {
       margin-top: 2rem;
       margin-bottom: 2rem;
@@ -542,17 +595,25 @@ source {
   }
 
   /* Schuhe-Section */
-  .schuhe {
-    padding-bottom: 2rem;
+  .shoes {
+    // padding-bottom: 2rem;
+    height: 1300px;
     & h1 {
+      text-align: left;
       margin-top: 0;
       padding-top: 4.2rem;
     }
-    & h2 {
-      padding-bottom: 2rem;
+    & h4,
+    h3 {
+      text-align: left;
+      // padding-bottom: 2rem;
     }
     & ol {
       width: 45%;
+      position: relative;
+      top: -26em;
+      left: 50em;
+      // transform: translate(50em, -26em);
     }
     & ol li {
       padding-bottom: 0;
@@ -562,19 +623,59 @@ source {
       left: 40%;
       transform: translate(5em, -3.3em);
     }
-    & .schuhe-box {
+    & .shoes-box {
+      position: relative;
+      top: -25em;
       box-shadow: 0px 8px 16px #00000029;
       width: 100%;
-      border: 4px rgb(173, 95, 95);
+      border: rgb(173, 95, 95);
       margin: 3rem 0;
+      border-radius: 10px;
       background-color: #efebe9;
     }
-    & .schuhe-box a {
+    & .shoes-box a {
       display: none;
     }
-    & .schuhe-box p {
+    & .shoes-box p {
       padding: 2rem 2.5rem;
       display: inline-block;
+    }
+    & .shoes-img {
+      display: inline-block;
+    }
+  }
+
+  /* Words-Section */
+  .words {
+    & ol {
+      padding: 0 6rem;
+      margin: 0;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      // gap: 10px;
+      // height: 500px;
+      // width: 90%;
+    }
+    & ol li {
+      width: 30%;
+      height: fit-content;
+    }
+    & ol li div {
+      margin: 0;
+      padding: 0;
+    }
+    & ol li div p {
+      padding: 2rem 4rem;
+    }
+    & ol li div::after {
+      height: 65px;
+      width: 200px;
+      right: 40px;
+    }
+    & ol li div::before {
+      top: -90px;
+      right: 50px;
     }
   }
 }
