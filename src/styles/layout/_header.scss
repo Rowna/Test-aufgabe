@@ -97,34 +97,6 @@ a:hover {
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.8);
 }
-/* 
-.nav-toggle-label {
-  position: absolute;
-  align-items: center;
-  height: 50%;
-  display: flex;
-  & > span,
-  &::before,
-  &::after {
-    display: block;
-    position: relative;
-    height: 6px;
-    width: 60px;
-    background-color: $secondary-f;
-  }
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-  }
-  &::before {
-    bottom: 8px;
-  }
-  &::after {
-    top: 8px;
-  }
-}
-*/
 .menue {
   // padding-right: 2rem;
   // position: fixed;

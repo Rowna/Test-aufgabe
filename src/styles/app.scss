@@ -45,7 +45,7 @@ h1 {
 h2 {
   font-family: $ff-h2;
   width: 35%;
-  color: inherit;
+  // color: inherit;
 }
 h3 {
   font-family: $ff-secondary;
@@ -54,18 +54,15 @@ h3 {
 p {
   font-family: $ff-primary;
 }
-
 picture,
 source {
   display: contents;
 }
-
 .section {
   padding: 1rem $global-p-m;
 }
-.hero-infos a {
-  display: none;
-}
+
+/* Hero-Section */
 .hero {
   display: grid;
   // height: 100vh;
@@ -81,6 +78,9 @@ source {
     left: 0;
     flex-direction: column;
     // position: fixed;
+  }
+  & .hero-infos a {
+    display: none;
   }
   &__container h1 {
     // font: normal normal 64px/90px $ff-h1;
@@ -100,10 +100,8 @@ source {
     grid-area: 1 / 1;
   }
 }
-.container {
-  z-index: -999;
-}
 .scroll {
+  z-index: 1111;
   position: absolute;
   bottom: 4.5em;
   width: 80%;
@@ -127,6 +125,7 @@ source {
   }
 }
 
+/* Anniversary-Section */
 .anniversary {
   display: grid;
   text-align: center;
@@ -149,19 +148,20 @@ source {
     text-decoration: underline;
     font-weight: 600;
   }
-  & .button {
+  & .center {
     display: grid;
     justify-content: center;
   }
-  & .leistung-btn {
+  & .btn {
     color: $secondary-f;
-    background-color: #ad5f35;
+    background-color: $c-secondary-1;
     padding: 1rem 2rem;
     border-radius: 10px;
     box-shadow: 0px 8px 16px #00000029;
   }
 }
 
+/* Chronology-Section */
 .chronology {
   // margin-right: 3rem;
   white-space: nowrap;
@@ -180,14 +180,14 @@ source {
   }
   // Kreise
   & ol li::before {
-    content: '';
+    content: "";
     position: relative;
     left: -18px;
     bottom: 0;
     width: 60px;
     height: 60px;
     background-color: white;
-    border: solid 18px #ad5f35;
+    border: solid 18px $c-secondary-1;
     border-radius: 50%;
   }
   & ol li div {
@@ -203,56 +203,103 @@ source {
     margin-top: 1rem;
     font-family: $ff-primary;
     color: $c-secondary;
-
   }
 }
 
-
-
-/* 
-.chronology {
-  & .info {
+/* Leistung-Section */
+.leistung {
+  background-color: whitesmoke;
+  // text-align: center;
+  margin: 0 auto;
+  &__container {
     display: flex;
-    // justify-content: space-between;
+    flex-direction: column;
+    padding: 0 2rem;
+    & h2 {
+      margin: 0 auto;
+    }
+    & .box {
+      width: 100%;
+      background-color: white;
+      margin: 1rem 0;
+      padding: 1rem;
+      border-radius: 15px;
+      box-shadow: 0px 8px 16px #00000029;
+      & .img {
+        background-color: #efebe9;
+        // border: 2px solid #424242;
+        width: 128px;
+        height: 128px;
+        margin: 0 auto;
+        padding: 0 auto;
+        border-radius: 50%;
+      }
+    }
   }
-  & .title {
-    margin-left: 20px;
-    margin-bottom: 20px;
-    // margin: 20px;
-    // padding: 0 0 30px .5rem;
+}
+/* Shoes-Section */
+.schuhe {
+  background-color: whitesmoke;
+  // margin: 0 auto;
+  & h1 {
+    text-align: left;
+    margin-bottom: 0;
   }
-  & .round {
-    margin-right: 20px;
-    z-index: 999;
-    // height: 100%;
+  & h3 {
+    font: normal normal 400 20px/48px $ff-primary;
+    margin-top: 0;
+    margin-bottom: 4rem;
   }
   & h2 {
-    width: 100%;
     margin-top: 0;
+    width: 100%;
+    font-family: $ff-secondary;
+    font-size: 1rem;
   }
-  &_container {
-    display: flex;
+  & ol {
+    list-style: none;
+    counter-reset: mycounter;
+    padding: 0;
   }
-  &_rounder {
-    display: inline-block;
+  & ol li {
+    position: relative;
+    margin-left: 30px;
+    // padding: 1.5rem 2.5rem;
+    font-family: $ff-primary;
+    color: $c-secondary;
+    align-items: center;
+    // padding-top: 0;
+    padding: 1rem 2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    // margin: 1rem 2rem;
+  }
+  & ol li::before {
+    content: counter(mycounter) ".";
+    counter-increment: mycounter;
+    position: absolute;
+    top: 0;
+    left: -30px;
     width: 50px;
     height: 50px;
-    border-radius: 50%;
-    background-color: #fff;
-    border: solid 5px #ad5f35;
+    line-height: 50px;
+    // border-radius: 50%;
+    color: white;
+    text-align: center;
+    background-color: $c-secondary-1;
+    box-shadow: 0px 8px 16px #00000029;
+    padding-bottom: 50px;
+    font-weight: bold;
   }
-  &_line {
-    display: block;
-    width: 2px;
-    height: 75%;
-    background-color: #5c5856;
-    transform: translate(25px, -7px);
+  & a {
+    color: $c-secondary-1;
+    font-family: $ff-secondary;
+    text-decoration: underline;
   }
-  & .last {
-    margin-top: 2rem;
+  & .schuhe-box p {
+    display: none;
   }
 }
-*/
 
 @media screen and (min-width: 1920px) {
   .section {
@@ -276,6 +323,7 @@ source {
   .hamburger-menu {
     display: none;
   }
+
   .hero {
     overflow: hidden;
     height: 100vh;
@@ -283,57 +331,60 @@ source {
       // transform: translate(0em, 6em);
       background-size: cover;
     }
+    &__container {
+      padding-top: 5rem;
+      color: $secondary-f;
+      flex-direction: row;
+      .hero-infos {
+        max-width: 40%;
+        height: 100%;
+      }
+      .hero-infos a {
+        display: inline-block;
+        font-size: 1.2rem;
+        font-family: $ff-primary;
+        font-weight: normal;
+        color: #f5efef;
+        margin-left: 1rem;
+      }
+      & h1 {
+        text-align: left;
+        margin: 0;
+        // margin-top: -30px;
+        line-height: 130%;
+        width: 100%;
+      }
+      & h2 {
+        width: 100%;
+        color: inherit;
+        // padding-left: 2rem;
+        margin: 0;
+        font: normal normal 30px/48px $ff-primary;
+      }
+      & h3 {
+        display: none;
+      }
+      & h4 {
+        font: normal normal 22px $ff-primary;
+        width: 90%;
+        // padding-left: 2rem;
+        display: inline-block;
+      }
+      & .center a {
+        width: fit-content;
+        margin: 0;
+        padding: 0;
+        box-shadow: 0px 8px 16px #00000029;
+        color: $c-secondary;
+        font-weight: 900;
+        border-radius: 10px;
+        background-color: $secondary-f;
+        border: solid 25px $secondary-f;
+        letter-spacing: 1px;
+      }
+    }
   }
-  .hero-infos {
-    max-width: 40%;
-    height: 100%;
-  }
-  .hero-infos a {
-    display: inline-block;
-    font-size: 1.2rem;
-    font-family: $ff-primary;
-    font-weight: normal;
-    color: #f5efef;
-    margin-left: 1rem;
-  }
-  .hero__container {
-    // padding-left: 0;
-    padding-top: 5rem;
-    color: $secondary-f;
-    flex-direction: row;
-    & h1 {
-      text-align: left;
-      margin: 0;
-      // margin-top: -30px;
-      line-height: 130%;
-      width: 100%;
-    }
-    & h2 {
-      width: 100%;
-      // padding-left: 2rem;
-      margin: 0;
-      font: normal normal 30px/48px $ff-primary;
-    }
-    & h3 {
-      display: none;
-    }
-    & h4 {
-      font: normal normal 22px $ff-primary;
-      width: 90%;
-      // padding-left: 2rem;
-      display: inline-block;
-    }
-    & .leistung-btn {
-      margin: 0;
-      box-shadow: 0px 8px 16px #00000029;
-      color: $primary-f;
-      font-weight: 900;
-      border-radius: 10px;
-      background-color: $secondary-f;
-      border: solid 25px $secondary-f;
-      letter-spacing: 1px;
-    }
-  }
+
   .scroll {
     bottom: 20em;
     width: 85%;
@@ -347,6 +398,8 @@ source {
       background-color: $secondary-f;
     }
   }
+
+  /* Anniversary-Section */
   .anniversary {
     padding-right: 0;
     padding-bottom: 0;
@@ -367,31 +420,16 @@ source {
     & .info-p {
       margin: 0;
     }
-    & .button {
+    & .center {
       display: block;
       margin: 5rem auto;
-      // justify-content: center;
     }
     & .info {
       margin-right: 10rem;
     }
   }
-  /*
-  .chronology {
-    padding-top: 0;
-  }
-  &-info {
-    // display: flex;
-    // flex-direction: column;
-  }
-  & .title {
-    display: block;
-    // background-color: rgb(116, 24, 24);
-    // flex-direction: column;
-    // display: flex;
-  }
-*/
 
+  /* Chronology-Section */
   .chronology {
     & ol {
       border-left: none;
@@ -426,7 +464,7 @@ source {
       width: 50px;
       height: 50px;
       background-color: #fff;
-      border: solid 5px #ad5f35;
+      border: solid 5px $c-secondary-1;
       transform: translateY(-50%);
       border-radius: 50%;
       z-index: 999;
@@ -486,7 +524,57 @@ source {
     }
   }
 
+  /* Leistung-Section */
+  .leistung {
+    &__container {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 50px;
+    }
+    & h2 {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+    & .box {
+      // width: 100%;
+      padding: 3rem;
+    }
+  }
 
-
-  
+  /* Schuhe-Section */
+  .schuhe {
+    padding-bottom: 2rem;
+    & h1 {
+      margin-top: 0;
+      padding-top: 4.2rem;
+    }
+    & h2 {
+      padding-bottom: 2rem;
+    }
+    & ol {
+      width: 45%;
+    }
+    & ol li {
+      padding-bottom: 0;
+      // padding: 0;
+    }
+    & ol li:nth-child(even) {
+      left: 40%;
+      transform: translate(5em, -3.3em);
+    }
+    & .schuhe-box {
+      box-shadow: 0px 8px 16px #00000029;
+      width: 100%;
+      border: 4px rgb(173, 95, 95);
+      margin: 3rem 0;
+      background-color: #efebe9;
+    }
+    & .schuhe-box a {
+      display: none;
+    }
+    & .schuhe-box p {
+      padding: 2rem 2.5rem;
+      display: inline-block;
+    }
+  }
 }
