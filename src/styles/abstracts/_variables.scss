@@ -1,20 +1,31 @@
-$ff-h1: "Yellowtail";
-$ff-h2: "Avenir Next";
-$ff-primary: "Nunito";
-$ff-secondary: "Roboto";
+$fonts: (
+  ff-h1: "Yellowtail",
+  ff-h2: "Avenir Next",
+  ff-primary: "Nunito",
+  ff-secondary: "Roboto"
+);
+
+$colors: (
+  primary-f: #222222,
+  secondary-f: #ffffff,
+  c-secondary: #5d4037,
+  c-secondary-1: #ad5f35
+);
+
+// $c-secondary: #5d4037;
+// $c-secondary-1: #ad5f35;
+// $primary-f: #222222;
+// $secondary-f: #ffffff;
+
+// $ff-h1: "Yellowtail";
+// $ff-h2: "Avenir Next";
+// $ff-primary: "Nunito";
+// $ff-secondary: "Roboto";
 
 $fs-primary-h1: 3.5rem;
 $fs-secondary-h1: 5rem;
 
-
 $fs-secondary-h3: 1.6rem;
-
-$c-secondary: #5D4037;
-$c-secondary-1: #ad5f35;
-
-$primary-f: #222222;
-$secondary-f: #ffffff;
 
 $global-p-m: 80px;
 $global-p: 8rem;
-
