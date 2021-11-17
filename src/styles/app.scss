@@ -17,6 +17,7 @@
 }
 html {
   // scroll-behavior: smooth;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -168,7 +169,6 @@ source {
 
 /* Chronology-Section */
 .chronology {
-  // margin-right: 3rem;
   white-space: nowrap;
   overflow: hidden;
   & ol {
@@ -182,6 +182,7 @@ source {
   & ol li {
     list-style-type: none;
     padding: 2px 0;
+    width: 80%;
   }
   // Kreise
   & ol li::before {
@@ -212,7 +213,7 @@ source {
 }
 
 /* Leistung-Section */
-.leistung {
+.services {
   background-color: whitesmoke;
   // text-align: center;
   margin: 0 auto;
@@ -348,6 +349,8 @@ source {
     right: 100px;
   }
 }
+
+
 
 @media screen and (min-width: 1920px) {
   .section {
@@ -575,7 +578,7 @@ source {
   }
 
   /* Leistung-Section */
-  .leistung {
+  .services {
     &__container {
       flex-direction: row;
       justify-content: space-between;
