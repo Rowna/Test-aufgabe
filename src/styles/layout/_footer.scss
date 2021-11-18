@@ -10,16 +10,16 @@ footer {
   }
   & .right {
     position: relative;
-  }
-  & .right::after {
-    content: "";
-    position: absolute;
-    left: 560px;
-    bottom: -20px;
-    display: block;
-    width: 75px;
-    height: 710px;
-    background-color: map-get($colors, c-secondary-1);
+    &::after {
+      content: "";
+      position: absolute;
+      left: 615px;
+      bottom: -20px;
+      display: block;
+      width: 75px;
+      height: 710px;
+      background-color: map-get($colors, c-secondary-1);
+    }
   }
 }
 @media screen and (min-width: 1920px) {

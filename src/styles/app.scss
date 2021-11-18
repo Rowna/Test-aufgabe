@@ -189,18 +189,18 @@ source {
     list-style-type: none;
     padding: 2px 0;
     width: 80%;
-  }
-  // Kreise
-  & ol li::before {
-    content: "";
-    position: relative;
-    left: -18px;
-    bottom: 0;
-    width: 60px;
-    height: 60px;
-    background-color: white;
-    border: solid 18px map-get($colors, c-secondary-1);
-    border-radius: 50%;
+    // Kreise
+    &::before {
+      content: "";
+      position: relative;
+      left: -18px;
+      bottom: 0;
+      width: 60px;
+      height: 60px;
+      background-color: white;
+      border: solid 18px map-get($colors, c-secondary-1);
+      border-radius: 50%;
+    }
   }
   & ol li div {
     font-family: map-get($fonts, ff-primary);
@@ -289,23 +289,23 @@ source {
     margin-bottom: 1rem;
     margin-top: 1rem;
     // margin: 1rem 2rem;
-  }
-  & ol li::before {
-    content: counter(mycounter) ".";
-    counter-increment: mycounter;
-    position: absolute;
-    top: 0;
-    left: -30px;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    // border-radius: 50%;
-    color: white;
-    text-align: center;
-    background-color: map-get($colors, c-secondary-1);
-    box-shadow: 0px 8px 16px #00000029;
-    padding-bottom: 50px;
-    font-weight: bold;
+    &::before {
+      content: counter(mycounter) ".";
+      counter-increment: mycounter;
+      position: absolute;
+      top: 0;
+      left: -30px;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      // border-radius: 50%;
+      color: white;
+      text-align: center;
+      background-color: map-get($colors, c-secondary-1);
+      box-shadow: 0px 8px 16px #00000029;
+      padding-bottom: 50px;
+      font-weight: bold;
+    }
   }
   & a {
     color: map-get($colors, c-secondary-1);
@@ -331,35 +331,35 @@ source {
     // padding: 20px 6rem;
     list-style-type: none;
   }
+  & ol li {
+    position: relative;
+  }
   & ol li div {
     background-color: rgb(235, 231, 231);
     padding: 1rem 1.5rem;
     margin: 6rem 5rem;
-  }
-  & ol li {
-    position: relative;
-  }
-  & ol li div::after {
-    content: "";
-    position: absolute;
-    display: block;
-    background-color: rgb(235, 231, 231);
-    height: 42px;
-    width: 100px;
-    right: 110px;
-    bottom: -39px;
-    clip-path: polygon(50% 100%, 0 0, 100% 0);
-  }
-  & ol li div::before {
-    font-weight: bold;
-    // content: '';
-    content: open-quote open-quote;
-    display: block;
-    position: absolute;
-    font-size: 6rem;
-    color: map-get($colors, c-secondary-1);
-    top: -105px;
-    right: 100px;
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      background-color: rgb(235, 231, 231);
+      height: 42px;
+      width: 100px;
+      right: 110px;
+      bottom: -39px;
+      clip-path: polygon(50% 100%, 0 0, 100% 0);
+    }
+    &::before {
+      font-weight: bold;
+      // content: '';
+      content: open-quote open-quote;
+      display: block;
+      position: absolute;
+      font-size: 6rem;
+      color: map-get($colors, c-secondary-1);
+      top: -105px;
+      right: 100px;
+    }
   }
 }
 
@@ -505,33 +505,45 @@ source {
       width: 390px;
       height: 2.2px;
       background: #5a5755;
-    }
-    /* 
-    & ol li:first-child::before {
-      display: none;
-    }
-    & ol li:last-child {
-      width: 480px;
-    }
-    & ol li:not(:first-child) {
-      margin-left: 10px;
-    }*/
-    // Die Kreise ausser der letzte
-    & ol li:not(:last-child)::after {
-      content: "";
-      // bezieht sich auf das letzte listen-element "relative"
-      position: absolute;
-      top: 50%;
-      // 100 + 1 px kommt genau ein weiteres px weiter, wo die kreise liegen
-      left: -19px;
-      bottom: 0;
-      width: 50px;
-      height: 50px;
-      background-color: #fff;
-      border: solid 5px map-get($colors, c-secondary-1);
-      transform: translateY(-50%);
-      border-radius: 50%;
-      z-index: 999;
+      // Die Kreise ausser der letzte
+      &:not(:last-child)::after {
+        content: "";
+        // bezieht sich auf das letzte listen-element "relative"
+        position: absolute;
+        top: 50%;
+        // 100 + 1 px kommt genau ein weiteres px weiter, wo die kreise liegen
+        left: -19px;
+        bottom: 0;
+        width: 50px;
+        height: 50px;
+        background-color: #fff;
+        border: solid 5px map-get($colors, c-secondary-1);
+        transform: translateY(-50%);
+        border-radius: 50%;
+        z-index: 999;
+      }
+      &:nth-child(odd) div {
+        // 16px nach oben positioniert
+        top: -30px;
+        // 100% der eigenen Höhe nach oben verschoben
+        transform: translateY(-100%);
+      }
+      &:nth-child(odd) div::before {
+        top: 100%;
+        border-width: 8px 8px 0 0;
+        border-color: white transparent transparent transparent;
+      }
+      &:nth-child(even) div {
+        // 16px nach oben positioniert
+        top: 30px;
+        // 100% der eigenen Höhe nach oben verschoben
+        // transform: translateY(-100%);
+      }
+      &:nth-child(even) div::before {
+        // top: -20px;
+        border-width: 8px 0 0 8px;
+        // border-color: transparent transparent transparent white;
+      }
     }
     & ol li div {
       position: absolute;
@@ -542,6 +554,16 @@ source {
       font-size: 1.2rem;
       white-space: normal;
       font-weight: 200;
+      &::before {
+        display: none;
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+      }
     }
     & ol li div time {
       font-weight: 600;
@@ -549,39 +571,6 @@ source {
       margin-bottom: 1rem;
       color: map-get($colors, c-secondary);
       font-family: map-get($fonts, ff-primary);
-    }
-    /* */
-    & ol li div::before {
-      display: none;
-      content: "";
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 0;
-      height: 0;
-      border-style: solid;
-    }
-    & ol li:nth-child(odd) div {
-      // 16px nach oben positioniert
-      top: -30px;
-      // 100% der eigenen Höhe nach oben verschoben
-      transform: translateY(-100%);
-    }
-    & ol li:nth-child(odd) div::before {
-      top: 100%;
-      border-width: 8px 8px 0 0;
-      border-color: white transparent transparent transparent;
-    }
-    & ol li:nth-child(even) div {
-      // 16px nach oben positioniert
-      top: 30px;
-      // 100% der eigenen Höhe nach oben verschoben
-      // transform: translateY(-100%);
-    }
-    & ol li:nth-child(even) div::before {
-      // top: -20px;
-      border-width: 8px 0 0 8px;
-      // border-color: transparent transparent transparent white;
     }
     & .last-p {
       display: none;
@@ -632,10 +621,10 @@ source {
     & ol li {
       padding-bottom: 0;
       // padding: 0;
-    }
-    & ol li:nth-child(even) {
-      left: 40%;
-      transform: translate(5em, -3.3em);
+      &:nth-child(even) {
+        left: 40%;
+        transform: translate(5em, -3.3em);
+      }
     }
     & .shoes-box {
       position: relative;
@@ -646,13 +635,13 @@ source {
       margin: 3rem 0;
       border-radius: 10px;
       background-color: #efebe9;
-    }
-    & .shoes-box a {
-      display: none;
-    }
-    & .shoes-box p {
-      padding: 2rem 2.5rem;
-      display: inline-block;
+      & a {
+        display: none;
+      }
+      & p {
+        padding: 2rem 2.5rem;
+        display: inline-block;
+      }
     }
     & .shoes-img {
       display: inline-block;
@@ -678,18 +667,18 @@ source {
     & ol li div {
       margin: 0;
       padding: 0;
+      &::after {
+        height: 65px;
+        width: 200px;
+        right: 40px;
+      }
+      &::before {
+        top: -90px;
+        right: 50px;
+      }
     }
     & ol li div p {
       padding: 2rem 4rem;
-    }
-    & ol li div::after {
-      height: 65px;
-      width: 200px;
-      right: 40px;
-    }
-    & ol li div::before {
-      top: -90px;
-      right: 50px;
     }
   }
 }
