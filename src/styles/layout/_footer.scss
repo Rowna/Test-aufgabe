@@ -1,24 +1,37 @@
-
 footer {
-    padding: 0 $global-p-m;
-    background-color: whitesmoke;
-    & h3, h4 {
-        text-align: left;
-    }
-    & h3 {
-        font: normal normal 400 50px/48px map-get($fonts, ff-h1);
-    }
-    & .right {
-        position: relative;
-    }
+  padding: 0 $global-p-m;
+  background-color: whitesmoke;
+  & h3,
+  h4 {
+    text-align: left;
+  }
+  & h3 {
+    font: normal normal 400 50px/48px map-get($fonts, ff-h1);
+  }
+  & .right {
+    position: relative;
+  }
+  & .right::after {
+    content: "";
+    position: absolute;
+    left: 560px;
+    bottom: -20px;
+    display: block;
+    width: 75px;
+    height: 710px;
+    background-color: map-get($colors, c-secondary-1);
+  }
+}
+@media screen and (min-width: 1920px) {
+  footer {
     & .right::after {
-        content: '';
-        position: absolute;
-        left: 560px;
-        bottom: -20px;
-        display: block;
-        width: 75px;
-        height: 710px;
-        background-color: map-get($colors, c-secondary-1);
+      left: 1100px;
+      width: 75px;
+      height: 450px;
     }
+  }
+  .footer {
+    display: flex;
+    gap: 40px;
+  }
 }

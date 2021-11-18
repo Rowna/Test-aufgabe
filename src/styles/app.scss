@@ -16,7 +16,7 @@
   box-sizing: border-box;
 }
 html {
-  // scroll-behavior: smooth;
+  scroll-behavior: smooth;
   overflow-x: hidden;
   // -webkit-font-smoothing: antialiased;
   // -moz-osx-font-smoothing: grayscale;
@@ -26,7 +26,6 @@ body {
   text-align: left;
   margin: 0;
   width: 100%;
-
 }
 main {
   // width: 100%;
@@ -42,7 +41,7 @@ a {
 }
 h1 {
   font-family: map-get($fonts, ff-h1);
-  font-size: $fs-primary-h1;
+  font-size: map-get($fontSize, fs-primary-h1);
   font-weight: normal;
   text-align: center;
   color: inherit;
@@ -167,7 +166,7 @@ source {
   }
   & .btn {
     color: map-get($colors, secondary-f);
-    background-color: map-get($colors , c-secondary-1);
+    background-color: map-get($colors, c-secondary-1);
     padding: 1rem 2rem;
     border-radius: 10px;
     box-shadow: 0px 8px 16px #00000029;
@@ -210,12 +209,12 @@ source {
     margin-bottom: 2rem;
     font-size: 1rem;
     white-space: normal;
-    color: map-get($colors , c-secondary);
+    color: map-get($colors, c-secondary);
   }
   & .last-p {
     margin-top: 1rem;
     font-family: map-get($fonts, ff-primary);
-    color: map-get($colors , c-secondary);
+    color: map-get($colors, c-secondary);
   }
 }
 
@@ -283,7 +282,7 @@ source {
     position: relative;
     margin-left: 30px;
     font-family: map-get($fonts, ff-primary);
-    color: map-get($colors , c-secondary);
+    color: map-get($colors, c-secondary);
     align-items: center;
     // padding-top: 0;
     padding: 1rem 2rem;
@@ -303,13 +302,13 @@ source {
     // border-radius: 50%;
     color: white;
     text-align: center;
-    background-color: map-get($colors , c-secondary-1);
+    background-color: map-get($colors, c-secondary-1);
     box-shadow: 0px 8px 16px #00000029;
     padding-bottom: 50px;
     font-weight: bold;
   }
   & a {
-    color: map-get($colors , c-secondary-1);
+    color: map-get($colors, c-secondary-1);
     font-family: map-get($fonts, ff-secondary);
     text-decoration: underline;
   }
@@ -324,6 +323,9 @@ source {
 /* Words-Section */
 .words {
   width: 100%;
+  &__container {
+    margin-bottom: 4rem;
+  }
   & ol {
     border-left: none;
     // padding: 20px 6rem;
@@ -355,32 +357,30 @@ source {
     display: block;
     position: absolute;
     font-size: 6rem;
-    color: map-get($colors , c-secondary-1);
+    color: map-get($colors, c-secondary-1);
     top: -105px;
     right: 100px;
   }
 }
-
-
 
 @media screen and (min-width: 1920px) {
   .section {
     padding: 0 $global-p;
   }
   h1 {
-    font-size: $fs-secondary-h1;
+    font-size: map-get($fontSize, fs-secondary-h1);
   }
   h2 {
-    color: map-get($colors , c-secondary-1);
+    color: map-get($colors, c-secondary-1);
     font-size: 2rem;
   }
   h3 {
-    color: map-get($colors , c-secondary-1);
+    color: map-get($colors, c-secondary-1);
     font-size: 1rem;
   }
   p {
     font-size: 1.2rem;
-    color: map-get($colors , c-secondary-1);
+    color: map-get($colors, c-secondary-1);
   }
   .hamburger-menu {
     display: none;
@@ -437,7 +437,7 @@ source {
         margin: 0;
         padding: 0;
         box-shadow: 0px 8px 16px #00000029;
-        color: map-get($colors , c-secondary-1);
+        color: map-get($colors, c-secondary-1);
         font-weight: 900;
         border-radius: 10px;
         background-color: map-get($colors, secondary-f);
@@ -467,7 +467,7 @@ source {
     padding-bottom: 0;
     width: 100%;
     & h3 {
-      font-size: $fs-secondary-h3;
+      font-size: map-get($fontSize, fs-secondary-h3);
     }
     & p {
       font-size: 1.3rem;
@@ -547,7 +547,7 @@ source {
       font-weight: 600;
       display: inline-block;
       margin-bottom: 1rem;
-      color: map-get($colors , c-secondary);
+      color: map-get($colors, c-secondary);
       font-family: map-get($fonts, ff-primary);
     }
     /* */
