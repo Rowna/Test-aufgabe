@@ -11,15 +11,16 @@ header {
   // margin: 0;
   // padding: 0 50px 0 $global-p-m;
   padding-left: $global-p-m;
-  // padding-right: $global-p-m;
+  padding-right: $global-p-m;
   background-color: map-get($colors, primary-f);
+  // background-color: red;
   opacity: 1;
   min-height: 70px;
   z-index: 1000;
   // box-sizing: border-box;
 }
 .logo {
-  flex-basis: 100%;
+  // flex-basis: 100%;
   width: 100%;
   // transform: translate(0em, 1.9em);
   position: relative;
@@ -35,6 +36,7 @@ nav {
 }
 .hamburger-menu {
   position: relative;
+  transform: translate(60px, 0em);
   display: block;
   width: 75px;
   cursor: pointer;
@@ -101,9 +103,9 @@ a:hover {
   // padding-right: 2rem;
   // position: fixed;
   // right: 7.8rem;
-  // transform: translate(-140px, 0em);
+  transform: translate(-80px, 0em);
   position: relative;
-  right: 7.5em;
+  // right: 2.5em;
   & a {
     color: map-get($colors, secondary-f);
     letter-spacing: 0px;

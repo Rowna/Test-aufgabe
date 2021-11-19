@@ -16,6 +16,7 @@ menu_btn.addEventListener('click', function() {
 var slider = tns({
     "container": "#my-slider",
     "items": 1,
+    "autoWidth": true,
     "controls": false,
     "mouseDrag": true,
     "slideBy": 1,

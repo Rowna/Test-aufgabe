@@ -83,8 +83,14 @@ source {
 /* Hero-Section */
 .hero {
   display: grid;
-  // height: 100vh;
   overflow: hidden;
+  &__background {
+    position: relative;
+    & img {
+      width: 100%;
+      object-fit: fill;
+    }
+  }
   &__container {
     position: relative;
     // position: absolute;
@@ -93,10 +99,8 @@ source {
     // transform: translate(0em, 6.1em);
     // right: 8em;
     left: 0;
-    display: flex;
-    flex: {
-      direction: column;
-    }
+    // display: flex;
+    // flex-direction: column;
     & h1 {
       text-align: left;
       width: 50%;
@@ -105,18 +109,17 @@ source {
   & .hero-infos a {
     display: none;
   }
-
   & h3 {
     text-align: left;
   }
   & h4 {
     display: none;
   }
-  &__background {
-    & img {
-      width: 100%;
-      object-fit: fill;
-    }
+  & .hero-infos {
+    grid-area: 1 / 1;
+    position: absolute;
+    top: 20px;
+    // left: 4rem;
   }
   // &__bild {
   //   width: 100%;
@@ -188,35 +191,36 @@ source {
   overflow: hidden;
   & ol {
     border-left: 2px solid #ada9a7;
-    width: 100vw;
-    height: auto;
-    font-size: 0;
+    // width: 100vw;
+    // height: auto;
+    // font-size: 0;
     padding: 0;
     transition: all 1s;
   }
   & ol li {
+    width: 100%;
     list-style-type: none;
-    padding: 2px 0;
-    width: 80%;
+    // padding: 10px 10px;
     // Kreise
     &::before {
+      display: block;
       content: "";
       position: relative;
-      left: -18px;
+      left: -28px;
       bottom: 0;
-      width: 60px;
-      height: 60px;
+      width: 50px;
+      height: 50px;
       background-color: white;
-      border: solid 18px map-get($colors, c-secondary-1);
+      border: solid 5px map-get($colors, c-secondary-1);
       border-radius: 50%;
     }
   }
   & ol li div {
     font-family: map-get($fonts, ff-primary);
-    width: 70%;
+    // width: 100%;
     margin-left: 3rem;
     margin-bottom: 2rem;
-    font-size: 1rem;
+    // font-size: 1rem;
     white-space: normal;
     color: map-get($colors, c-secondary);
   }
@@ -262,17 +266,16 @@ source {
 .shoes {
   background-color: whitesmoke;
   // margin: 0 auto;
+/*
   & h1 {
     text-align: center;
     // text-align: left;
     margin-bottom: 0;
-  }
+  }  
   & h3 {
     font: normal normal 400 20px/48px map-get($fonts, ff-primary);
-    margin: {
-      top: 0;
-      bottom: 4rem;
-    }
+    margin-top: 0;
+    margin-bottom: 4rem;
     // margin-top: 0;
     // margin-bottom: 4rem;
   }
@@ -327,6 +330,7 @@ source {
   & .shoes-img {
     display: none;
   }
+  */
 }
 
 /* Words-Section */
@@ -506,16 +510,20 @@ source {
     // padding-top: 4rem;
     // padding-bottom: 4rem;
     & ol {
+      font-size: 0;
       border-left: none;
       padding: 250px 0;
     }
     & ol li {
       position: relative;
       display: inline-block;
-      width: 390px;
-      height: 2.2px;
+      width: 400px;
+      height: 2.5px;
       background: #5a5755;
       // Die Kreise ausser der letzte
+      &::before {
+        display: none;
+      }
       &:not(:last-child)::after {
         content: "";
         // bezieht sich auf das letzte listen-element "relative"
@@ -528,8 +536,8 @@ source {
         height: 50px;
         background-color: #fff;
         border: solid 5px map-get($colors, c-secondary-1);
-        transform: translateY(-50%);
         border-radius: 50%;
+        transform: translateY(-50%);
         z-index: 999;
       }
       &:nth-child(odd) div {
