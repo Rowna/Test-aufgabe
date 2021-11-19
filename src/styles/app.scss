@@ -20,7 +20,7 @@ html {
   overflow-x: hidden;
   // -webkit-font-smoothing: antialiased;
   // -moz-osx-font-smoothing: grayscale;
-  width: 100%;
+  // width: 100%;
 }
 body {
   text-align: left;
@@ -31,6 +31,9 @@ main {
   // width: 100%;
   max-width: 100%;
   // max-height: auto;
+}
+img {
+  width: 100%;
 }
 ul {
   list-style: none;
@@ -74,6 +77,7 @@ source {
 }
 .section {
   padding: 1rem $global-p-m;
+  // width: 90%;
 }
 
 /* Hero-Section */
@@ -93,29 +97,34 @@ source {
     flex: {
       direction: column;
     }
-    // flex-direction: column;
-    // position: fixed;
+    & h1 {
+      text-align: left;
+      width: 50%;
+    }
   }
   & .hero-infos a {
     display: none;
   }
-  &__container h1 {
-    text-align: left;
-    width: 50%;
-  }
+
   & h3 {
     text-align: left;
   }
   & h4 {
     display: none;
   }
-  &__bild {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    grid-area: 1 / 1;
+  &__background {
+    & img {
+      width: 100%;
+      object-fit: fill;
+    }
   }
+  // &__bild {
+  //   width: 100%;
+  //   height: 100%;
+  //   object-fit: cover;
+  //   object-position: center;
+  //   grid-area: 1 / 1;
+  // }
 }
 .scroll {
   z-index: 1111;
@@ -322,6 +331,7 @@ source {
 
 /* Words-Section */
 .words {
+  overflow-x: hidden;
   width: 100%;
   &__container {
     margin-bottom: 4rem;

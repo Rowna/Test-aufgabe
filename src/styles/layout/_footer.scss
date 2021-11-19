@@ -1,12 +1,19 @@
 footer {
   padding: 0 $global-p-m;
   background-color: whitesmoke;
+  & img {
+    display: inline-block;
+    width: 5%;
+  }
   & h3,
   h4 {
     text-align: left;
   }
   & h3 {
     font: normal normal 400 50px/48px map-get($fonts, ff-h1);
+  }
+  & h5 {
+    width: 50%;
   }
   & .right {
     position: relative;

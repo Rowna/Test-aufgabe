@@ -7,6 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <title>Title</title>
+  <link rel="shortcut icon" href="#">
   <link href="css/app.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
 </head>
@@ -65,12 +66,21 @@
   <main>
     <!-- Home-Section  -->
     <section id="hero" class="hero">
+      <!--  
       <picture class="hero__background">
         <source media="(min-width: 960px)" srcset="./images/hero-bild-d.png">
-        <img class="hero__bild" src="./images/hero-bild.png" alt="Logo" />
+        <img class="hero__bild" src="./images/hero-bild.png" />
       </picture>
-
+      -->
+      
       <div class="section hero__container">
+        <div id="my-slider" class="hero__background">
+          <img src="./images/hero-bild.png">
+          <img src="./images/hero-bild.png">
+          <img src="./images/hero-bild.png">
+          <img src="./images/hero-bild.png">
+        </div>
+
         <div class="hero-infos">
           <h1>Schuhmanufaktur Formschön <a href="#">In Bad Godesberg</a></h1>
           <h2>Eleganz von Kopf bis Fuß</h2>
@@ -312,8 +322,8 @@
     </section>
 
     <!-- Words-Section -->
-    <sectio id="words" class="section words">
-      <div>
+    <section id="words" class="section words">
+      <div class="words__info">
         <h1>Stimmen</h1>
         <h3>der Manufaktur Formschön</h3>
       </div>
@@ -351,9 +361,11 @@
             <div>
               <p>
                 Ich komme gerne in die Maßschuhmacherei Formschön, weil mir die Atmosphäre gefällt und weil ich mich
-                immer gut beraten fühle. <br><br>Ich hasse das Einkaufen. Und deshalb bin ich froh, dass es die Schuhmanufaktur
+                immer gut beraten fühle. <br><br>Ich hasse das Einkaufen. Und deshalb bin ich froh, dass es die
+                Schuhmanufaktur
                 Formschön gibt. Dort weiß ich, was ich für mein Geld bekomme. Außerdem hält ein Paar Maßschuhe einfach
-                lange – und erspart es mir, laufend wieder auswählen und anprobieren zu müssen. <br><br>Wenn ich all diese
+                lange – und erspart es mir, laufend wieder auswählen und anprobieren zu müssen. <br><br>Wenn ich all
+                diese
                 Plastikschuhe in den üblichen Auslagen sehe, denke ich: Welche Materialvergeudung! Da sind
                 handgefertigte Schuhe doch viel nachhaltiger.
               </p>
@@ -375,7 +387,7 @@
 
         </ol>
       </div>
-    </sectio>
+    </section>
 
     <footer class="section footer">
       <div>
@@ -399,6 +411,7 @@
 
   </main>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
   <!-- <script type="text/javascript" src="js/app.js"></script> -->
 
 </body>

@@ -12,3 +12,15 @@ menu_btn.addEventListener('click', function() {
     // meun_btn2.classList.remove('.menue');
     // console.log("test")
 });
+
+var slider = tns({
+    "container": "#my-slider",
+    "items": 1,
+    "controls": false,
+    "mouseDrag": true,
+    "slideBy": 1,
+    "navPosition": "bottom",
+    "swipeAngle": false,
+    "speed": 400,
+    "preventScrollOnTouch": 'auto'
+});
