@@ -16,13 +16,14 @@ var slider = tns({
     "slideBy": 1,
     "autoWidth": true,
     "mouseDrag": true,
-    "nav": false,
-    "controls": false,
+    "nav": true,
+    "navPosition": "bottom",
+    "controls": true,
+    "controlsPosition": "bottom",
     "swipeAngle": false,
     "controlsContainer": "#controls",
     // "prevButton": ".left",
     // "nextButton": ".right",
-    // "navPosition": "bottom",
     "speed": 400,
     "preventScrollOnTouch": 'auto'
 });

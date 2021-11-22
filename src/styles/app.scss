@@ -85,16 +85,51 @@ source {
 .tns-horizontal.tns-subpixel > .tns-item {
   vertical-align: baseline;
 }
-
+.tns-nav {
+  position: absolute;
+  top: 93%;
+  left: 32%;
+  & > button {
+    display: inline-block;
+    width: 70px;
+    height: 8px;
+    margin: 5px;
+    background-color: map-get($colors, primary-f);
+  }
+}
 .scroll {
   z-index: 10000;
   position: absolute;
-  top: 45.5em;
-  width: 80%;
+  top: 90%;
+  // top: 40.5em;
+  // bottom: 5em;
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  padding: 0 5rem;
+  & > svg {
+    cursor: pointer;
+  }
 }
-
+.hero__info {
+  margin-top: 3rem;
+  padding: 0 5rem;
+  position: absolute;
+  z-index: 1000;
+  // display: grid;
+  // justify-content: space-between;
+  // align-items: center;
+  & h1, & h2, & h3 {
+    width: 60%;
+    text-align: left;
+    // grid-template-columns: 1fr 1fr;
+    // grid-template-rows: 1fr;
+    // grid-area:  1 / 1;
+  }
+  & a, & .hero-h4, & .center {
+    display: none;
+  }
+}
 /* Hero-Section 
 .hero {
   display: grid;
@@ -471,6 +506,19 @@ source {
   .tns-horizontal.tns-subpixel > .tns-item {
     vertical-align: top;
   }
+
+  .tns-nav {
+    position: absolute;
+    top: 90%;
+    left: 40%;
+    & > button {
+      display: inline-block;
+      width: 80px;
+      height: 5px;
+      margin: 5px;
+      background-color: map-get($colors, secondary-f);
+    }
+  }
 }
 
 // Big landscape tablets, laptops, and desktops
@@ -487,13 +535,13 @@ source {
   }
 
   .scroll {
-    top: 50em;
+    top: 60%;
+    padding: 0 5rem;
     & .left,
     & .right {
       fill: map-get($colors, secondary-f);
     }
   }
-
 
   .services {
     & h2 {
@@ -626,6 +674,15 @@ source {
     }
   }
 */
+
+  .scroll {
+    top: 50%;
+    padding: 0 5rem;
+    & .left,
+    & .right {
+      fill: map-get($colors, secondary-f);
+    }
+  }
 
   /* Anniversary-Section */
   .anniversary {
