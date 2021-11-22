@@ -15,6 +15,7 @@
 *::after {
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -42,6 +43,7 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
 h1 {
   font-family: map-get($fonts, ff-h1);
   font-size: map-get($fontSize, fs-primary-h1);
@@ -80,7 +82,20 @@ source {
   // width: 90%;
 }
 
-/* Hero-Section */
+.tns-horizontal.tns-subpixel > .tns-item {
+  vertical-align: baseline;
+}
+
+.scroll {
+  z-index: 10000;
+  position: absolute;
+  top: 45.5em;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Hero-Section 
 .hero {
   display: grid;
   overflow: hidden;
@@ -129,6 +144,9 @@ source {
   //   grid-area: 1 / 1;
   // }
 }
+*/
+
+/*
 .scroll {
   z-index: 1111;
   position: absolute;
@@ -153,6 +171,7 @@ source {
     transform: rotate(180deg);
   }
 }
+*/
 
 /* Anniversary-Section */
 .anniversary {
@@ -173,15 +192,15 @@ source {
     font-weight: 600;
   }
   & .center {
-    display: grid;
-    justify-content: center;
-  }
-  & .btn {
-    color: map-get($colors, secondary-f);
-    background-color: map-get($colors, c-secondary-1);
-    padding: 1rem 2rem;
-    border-radius: 10px;
-    box-shadow: 0px 8px 16px #00000029;
+    // display: grid;
+    // justify-content: center;
+    & .btn {
+      color: map-get($colors, secondary-f);
+      background-color: map-get($colors, c-secondary-1);
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      box-shadow: 0px 8px 16px #00000029;
+    }
   }
 }
 
@@ -262,7 +281,7 @@ source {
     }
   }
 }
-
+/* Shoes-Section */
 .shoe {
   background-color: whitesmoke;
   & h2 {
@@ -302,16 +321,21 @@ source {
       font-weight: bold;
     }
   }
-  & .shoes-box p {
+  // & .shoes-box p {
+  //   display: none;
+  // }
+  // & a {
+  //   text-decoration: underline;
+  //   color: map-get($colors, c-secondary-1);
+  //   font-family: map-get($fonts, ff-secondary);
+  // }
+  & .shoe.info__a {
+    display: block;
+  }
+  & .shoe-info__p {
     display: none;
   }
-  & a {
-    text-decoration: underline;
-    color: map-get($colors, c-secondary-1);
-    font-family: map-get($fonts, ff-secondary);
-  }
 }
-/* Shoes-Section */
 /*
 .shoes {
   background-color: whitesmoke;
@@ -422,12 +446,88 @@ source {
       position: absolute;
       font-size: 6rem;
       color: map-get($colors, c-secondary-1);
-      top: -105px;
+      top: -95px;
       right: 100px;
     }
   }
 }
 
+// tablet, landscape iPad, lo-res laptops ands desktops
+@media (min-width: 960px) {
+  // #my-slider-mw {
+  //   height: 900px;
+  // }
+  .tns-horizontal.tns-subpixel > .tns-item {
+    vertical-align: baseline;
+  }
+  .tns-outer {
+    height: 650px;
+    position: relative;
+    top: -1rem;
+  }
+  .tns-ovh {
+    height: 700px;
+  }
+  .tns-horizontal.tns-subpixel > .tns-item {
+    vertical-align: top;
+  }
+}
+
+// Big landscape tablets, laptops, and desktops
+@media screen and (min-width: 1025px) {
+  // #my-slider-mw {
+  //   height: 900px;
+  // }
+  .tns-outer {
+    position: relative;
+    top: -1rem;
+  }
+  .tns-horizontal.tns-subpixel > .tns-item {
+    vertical-align: top;
+  }
+
+  .scroll {
+    top: 50em;
+    & .left,
+    & .right {
+      fill: map-get($colors, secondary-f);
+    }
+  }
+
+
+  .services {
+    & h2 {
+      text-align: center;
+      padding: 2rem 0;
+    }
+  }
+  .shoe {
+    padding-bottom: 1rem;
+    & ol {
+      // 1 Zeile, 2 Spalten
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr 1fr;
+    }
+    & .shoe-info__a {
+      display: none;
+    }
+    & .shoe-info__p {
+      display: block;
+      margin: 2rem 0;
+      padding: 1.2rem;
+      border-radius: 10px;
+      background-color: rgb(236, 233, 233);
+    }
+  }
+  .words {
+    & h3 {
+      display: none;
+    }
+  }
+}
+
+// Wide-Screen
 @media screen and (min-width: 1920px) {
   .section {
     padding: 0 $global-p;
@@ -450,7 +550,7 @@ source {
   .hamburger-menu {
     display: none;
   }
-
+  /* 
   .hero {
     overflow: hidden;
     height: 100vh;
@@ -525,6 +625,7 @@ source {
       background-color: map-get($colors, secondary-f);
     }
   }
+*/
 
   /* Anniversary-Section */
   .anniversary {
@@ -657,6 +758,7 @@ source {
       text-align: left;
     }
     & h2 {
+      text-align: center;
       margin-top: 2rem;
       margin-bottom: 2rem;
     }
@@ -666,7 +768,48 @@ source {
     }
   }
 
+  .shoe {
+    & h3 {
+      margin-top: 0;
+      text-align: left;
+    }
+    & p {
+      margin: 0;
+    }
+    & h2 {
+      color: inherit;
+      margin: 0;
+      padding-top: 6rem;
+      text-align: left;
+    }
+    &__container {
+      display: flex;
+      justify-content: space-between;
+    }
+    & .img-shoe {
+      width: 30%;
+      & img {
+        width: 30%;
+      }
+    }
+    & ol {
+      margin-top: 0;
+      margin-left: 3rem;
+      width: 100%;
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr 1fr;
+    }
+    & .shoe-info__a {
+      display: none;
+    }
+    & .shoe-info__p {
+      display: block;
+    }
+  }
+
   /* Schuhe-Section */
+  /* 
   .shoes {
     // padding-bottom: 2rem;
     height: 1300px;
@@ -716,16 +859,28 @@ source {
       display: inline-block;
     }
   }
+*/
 
   /* Words-Section */
   .words {
+    & h2 {
+      font: normal map-get($fontSize, fs-primary-h1) map-get($fonts, ff-h1);
+      text-align: left;
+      color: inherit;
+    }
+    & h3 {
+      display: none;
+    }
+    & h4 {
+      text-align: left;
+    }
     & ol {
-      padding: 0 6rem;
+      // padding: 0 6rem;
       margin: 0;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      // gap: 10px;
+      gap: 3rem;
       // height: 500px;
       // width: 90%;
     }
@@ -742,7 +897,7 @@ source {
         right: 40px;
       }
       &::before {
-        top: -90px;
+        top: -75px;
         right: 50px;
       }
     }
@@ -751,3 +906,13 @@ source {
     }
   }
 }
+
+/* 
+@media (min-width:320px) { // smartphones, iPhone, portrait 480x320 phones }
+@media (min-width:481px) { // portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. }
+@media (min-width:641px) { // portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones }
+@media (min-width:961px) { // tablet, landscape iPad, lo-res laptops ands desktops  }
+@media (min-width:1025px) { // big landscape tablets, laptops, and desktops }
+@media (min-width:1281px) { // hi-res laptops and desktops }
+
+*/

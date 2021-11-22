@@ -8,6 +8,7 @@
   <meta name="author" content="">
   <title>Title</title>
   <link rel="shortcut icon" href="#">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
 </head>
 
 <body>
@@ -61,8 +62,31 @@
     <a href="#words">Stimmen</a>
     <a href="#services">Pflegetipps</a>
   </nav>
-
   <main>
+
+    <section>
+
+      <div id="controls" class="scroll">
+        <svg class="left" xmlns="http://www.w3.org/2000/svg" width="53.143" height="37.2" viewBox="0 0 53.143 37.2">
+          <path d="M20.6,5l3.747,3.747-12.17,12.2H55.143v5.314H12.177l12.2,12.2L20.6,42.2,2,23.6Z"
+            transform="translate(-2 -5)" />
+        </svg>
+
+        <svg class="right" xmlns="http://www.w3.org/2000/svg" width="53.143" height="37.2" viewBox="0 0 53.143 37.2">
+          <path d="M36.543,5,32.8,8.747l12.17,12.2H2v5.314H44.967l-12.2,12.2L36.543,42.2l18.6-18.6Z"
+            transform="translate(-2 -5)" />
+        </svg>
+      </div>
+
+      <picture id="my-slider">
+        <source media="(min-width: 960px)" srcset="./images/hero-bild-d.png" srcset="./images/hero-bild-d.png"
+          srcset="./images/hero-bild-d.png">
+        <img class="hero__bild" src="./images/hero-bild.png" />
+        <img src="./images/hero-bild.png">
+        <img src="./images/hero-bild.png">
+      </picture>
+
+    </section>
 
     <section id="anniversary" class="section anniversary">
       <div>
@@ -239,69 +263,107 @@
     <section class="section shoe">
       <h2>Maßschuhe</h2>
       <h3>der Manufaktur Formschön</h3>
-      <h3>Der Weg zu Ihrem Maßschuh:</h3>
-      <img class="shoes-img" src="./images/Bild_19.png" alt="">
 
-      <ol>
-        <li>Die Füßvermessung</li>
-        <li>Die Auswahl von Farbe und Form</li>
-        <li>Die Entscheidung fürs Leder</li>
-        <li>Die Herstellung des Leistens</li>
-        <li>Die Fertigung des Schuhs - Teil I</li>
-        <li>Die Anprobe</li>
-        <li>Die Fertigung des Schuhs - Teil II</li>
-        <li>Letzte Anpassungen und Feinarbeiten</li>
-      </ol>
-
-      <div class="shoes-box">
-        <a href="#">Informationen zur möglichen Wartezeit</a>
-        <p>*Der zeitliche Aufwand bei der Herstellung Ihrer individuellen Maßschuhe kann beträchtlich variieren, je nach
-          Modell, Machart und Sonderwünschen. Wir rechnen mit mindestens 30 Arbeitsstunden. Der gesamte Arbeitsprozess
-          zieht sich in der Regel über acht Wochen hin. Dreimal sind Sie in dieser Zeit gefragt: Beim Vermessen und
-          Wählen des Modells, bei einer ersten Anprobe und schließlich am Tag der Fertigstellung. Rechnen Sie pro Paar
-          mit einem Preis zwischen 2000,– und 3000,– Euro. Sobald wir einen fußgerechten Leisten für Sie gefertigt
-          haben, können wir ihn für alle Nachfolgemodelle nutzen – und Sie sparen bares Geld. Damenschuhe sind in der
-          Regel aufwendiger und daher etwas teurer als Modelle für den Herrn.
-        </p>
+      <div class="shoe__container">
+        <div class="shoe-img">
+          <p>Der Weg zu Ihrem Maßschuh:</p>
+          <img src="./images/Bild_19.png">
+        </div>
+        <ol class="shoe-list">
+          <li>Die Füßvermessung</li>
+          <li>Die Auswahl von Farbe und Form</li>
+          <li>Die Entscheidung fürs Leder</li>
+          <li>Die Herstellung des Leistens</li>
+          <li>Die Fertigung des Schuhs - Teil I</li>
+          <li>Die Anprobe</li>
+          <li>Die Fertigung des Schuhs - Teil II</li>
+          <li>Letzte Anpassungen und Feinarbeiten</li>
+        </ol>
       </div>
 
+      <a class="shoe-info__a" href="#">Informationen zur möglichen Wartezeit</a>
+      <p class="shoe-info__p">*Der zeitliche Aufwand bei der Herstellung Ihrer individuellen Maßschuhe kann beträchtlich
+        variieren, je nach
+        Modell, Machart und Sonderwünschen. Wir rechnen mit mindestens 30 Arbeitsstunden. Der gesamte Arbeitsprozess
+        zieht sich in der Regel über acht Wochen hin. Dreimal sind Sie in dieser Zeit gefragt: Beim Vermessen und
+        Wählen des Modells, bei einer ersten Anprobe und schließlich am Tag der Fertigstellung. Rechnen Sie pro Paar
+        mit einem Preis zwischen 2000,– und 3000,– Euro. Sobald wir einen fußgerechten Leisten für Sie gefertigt
+        haben, können wir ihn für alle Nachfolgemodelle nutzen – und Sie sparen bares Geld. Damenschuhe sind in der
+        Regel aufwendiger und daher etwas teurer als Modelle für den Herrn.
+      </p>
     </section>
-    <!--
-    <section id="shoes" class="section shoes">
-      <div>
-        <h1>Maßschuhe</h1>
+
+    <section class="section words">
+      <div class="words__info">
+        <h2>Stimmen</h2>
         <h3>der Manufaktur Formschön</h3>
       </div>
-   
-      <div>
-        <h4>Der Weg zu Ihrem Maßschuh:</h4>
-        <img class="shoes-img" src="./images/Bild_19.png" alt="">
+      <h4>Das sagen unsere Kundinnen und Kunden:</h4>
+
+      <div class="words__container">
+        <ol>
+          <li>
+            <div>
+              <p>
+                Ich bin 16 Stunden am Tag im wahrsten Sinn des Wortes auf den Füßen. Und da merkt man schnell, welches
+                Schuhwerk man trägt. Seit ich einmal gemerkt habe, welchen Unterschied es macht, ob die Schuhe wie
+                angegossen passen oder nicht, ist für mich klar: Die Maßschuhe von Formschön sind ihren Preis wert.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <div>
+              <p>
+                Maßschuhe kann ich mir nicht leisten. Zum Glück habe ich ein unproblematisches Paar Füße, für die ich
+                leicht hochwertige Konfektionsschuhe finde. Sie müssen zeitlos gut aussehen und aus bestem Leder
+                gefertigt
+                sein. Dann bringe ich sie im Laufe der Jahre immer mal wieder zur Schuhmanufaktur Formschön, wenn
+                Absätze
+                repariert oder neue Sohlen aufgebracht werden müssen. Das lohnt sich!<br><br><br>
+
+                Einmal habe ich einen sehr passenden
+                Spruch gehört: <br>„Wer billigt kauft, zahlt doppelt!“
+
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <div>
+              <p>
+                Ich komme gerne in die Maßschuhmacherei Formschön, weil mir die Atmosphäre gefällt und weil ich mich
+                immer gut beraten fühle. <br><br>Ich hasse das Einkaufen. Und deshalb bin ich froh, dass es die
+                Schuhmanufaktur
+                Formschön gibt. Dort weiß ich, was ich für mein Geld bekomme. Außerdem hält ein Paar Maßschuhe einfach
+                lange – und erspart es mir, laufend wieder auswählen und anprobieren zu müssen. <br><br>Wenn ich all
+                diese
+                Plastikschuhe in den üblichen Auslagen sehe, denke ich: Welche Materialvergeudung! Da sind
+                handgefertigte Schuhe doch viel nachhaltiger.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <div>
+              <p>
+                Ich weiß nicht, wie viel Zeit ich immer damit vertan habe, Schuhe zu finden, die mir sowohl gefielen
+                als
+                auch wirklich gut passten. Meistens entschied ich mich dann für etwas optisch Ansprechendes und nahm
+                dafür
+                Schmerzen an den Füßen in Kauf. Damit ist nun Schluss. Mir kommt es aufs Preis-Leistungs-Verhältnis an.
+                Und das stimmt bei „Formschön“.
+              </p>
+            </div>
+          </li>
+        </ol>
       </div>
-      <ol>  
-        <li>Die Füßvermessung</li>
-        <li>Die Auswahl von Farbe und Form</li>
-        <li>Die Entscheidung fürs Leder</li>
-        <li>Die Herstellung des Leistens</li>
-        <li>Die Fertigung des Schuhs - Teil I</li>
-        <li>Die Anprobe</li>
-        <li>Die Fertigung des Schuhs - Teil II</li>
-        <li>Letzte Anpassungen und Feinarbeiten</li>
-      </ol>
-      <div class="shoes-box">
-        <a href="#">Informationen zur möglichen Wartezeit</a>
-        <p>*Der zeitliche Aufwand bei der Herstellung Ihrer individuellen Maßschuhe kann beträchtlich variieren, je nach
-          Modell, Machart und Sonderwünschen. Wir rechnen mit mindestens 30 Arbeitsstunden. Der gesamte Arbeitsprozess
-          zieht sich in der Regel über acht Wochen hin. Dreimal sind Sie in dieser Zeit gefragt: Beim Vermessen und
-          Wählen des Modells, bei einer ersten Anprobe und schließlich am Tag der Fertigstellung. Rechnen Sie pro Paar
-          mit einem Preis zwischen 2000,– und 3000,– Euro. Sobald wir einen fußgerechten Leisten für Sie gefertigt
-          haben, können wir ihn für alle Nachfolgemodelle nutzen – und Sie sparen bares Geld. Damenschuhe sind in der
-          Regel aufwendiger und daher etwas teurer als Modelle für den Herrn.
-        </p>
-      </div>
-  
+
     </section>
-  -->
+
   </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 
 </body>
 
