@@ -77,10 +77,12 @@ picture,
 source {
   display: contents;
 }
+
 .section {
   padding: 1rem $global-p-m;
   // width: 90%;
 }
+
 .main-hero {
   & .tns-horizontal.tns-subpixel > .tns-item {
     vertical-align: baseline;
@@ -180,32 +182,6 @@ source {
 }
 */
 
-/*
-.scroll {
-  z-index: 1111;
-  position: absolute;
-  bottom: 4.5em;
-  width: 80%;
-  display: flex;
-  justify-content: space-between;
-  & .line {
-    display: inline-block;
-    height: 0.1rem;
-    width: 2.5rem;
-    margin-top: 2rem;
-    background-color: map-get($colors, primary-f);
-  }
-  & .line ~ .line {
-    margin-left: 1rem;
-  }
-  & .fett-line {
-    height: 4px;
-  }
-  & .right {
-    transform: rotate(180deg);
-  }
-}
-*/
 
 /* Anniversary-Section */
 .anniversary {
@@ -225,16 +201,12 @@ source {
     text-decoration: underline;
     font-weight: 600;
   }
-  & .center {
-    // display: grid;
-    // justify-content: center;
-    & .btn {
-      color: map-get($colors, secondary-f);
-      background-color: map-get($colors, c-secondary-1);
-      padding: 1rem 2rem;
-      border-radius: 10px;
-      box-shadow: 0px 8px 16px #00000029;
-    }
+  &__button {
+    color: map-get($colors, secondary-f);
+    background-color: map-get($colors, c-secondary-1);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px #00000029;
   }
 }
 
@@ -474,8 +446,8 @@ source {
     }
     &::before {
       font-weight: bold;
-      // content: '';
-      content: open-quote open-quote;
+      content: '„';
+      // content: open-quote;
       display: block;
       position: absolute;
       font-size: 6rem;
@@ -649,11 +621,10 @@ source {
         display: block;
       }
       & .btn {
-        width: fit-content;
+        // width: fit-content;
         margin: 0;
         padding: 0;
         box-shadow: 0px 8px 16px #00000029;
-        color: map-get($colors, c-secondary-1);
         font-weight: 900;
         border-radius: 10px;
         background-color: map-get($colors, secondary-f);
@@ -922,20 +893,27 @@ source {
     & h4 {
       text-align: left;
     }
-    & ol {
-      // padding: 0 6rem;
+
+    &__items {
       margin: 0;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, max-content);
+      // display: flex;
+      // justify-content: space-between;
+      // flex-wrap: wrap;
       gap: 3rem;
-      // height: 500px;
-      // width: 90%;
     }
-    & ol li {
-      width: 30%;
+
+    &__item {
+      width: 100%;
       height: fit-content;
+
+      &--large {
+        grid-row: 1 / -1;
+      }
     }
+
     & ol li div {
       margin: 0;
       padding: 0;

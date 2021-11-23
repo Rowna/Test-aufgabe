@@ -1,6 +1,8 @@
+/* 
 footer {
   padding: 0 $global-p-m;
   background-color: whitesmoke;
+  position: relative;
   & img {
     display: inline-block;
     width: 5%;
@@ -15,30 +17,31 @@ footer {
   & h5 {
     width: 50%;
   }
-  & .right {
-    position: relative;
+  & .footer-span {
+    position: absolute;
     &::after {
       content: "";
       position: absolute;
-      left: 615px;
-      bottom: -20px;
       display: block;
       width: 75px;
-      height: 710px;
+      // height: 100%;
+      left: 40%;
+      // left: 615px;
+      // bottom: -20px;
+      // height: 710px;
       background-color: map-get($colors, c-secondary-1);
     }
   }
 }
 @media screen and (min-width: 1920px) {
   footer {
-    & .right::after {
+    display: flex;
+    gap: 40px;
+    & .footer-span::after {
       left: 1100px;
       width: 75px;
       height: 450px;
     }
   }
-  .footer {
-    display: flex;
-    gap: 40px;
-  }
 }
+*/
