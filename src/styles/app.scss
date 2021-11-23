@@ -6,6 +6,7 @@
 @import "layout/footer";
 @import "components/buttons";
 @import "components/main-hero";
+@import "components/anniversary";
 
 @import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rancho&family=Roboto:wght@900&display=swap");
@@ -84,33 +85,6 @@ source {
   // width: 90%;
 }
 
-
-/* Anniversary-Section */
-.anniversary {
-  display: grid;
-  text-align: center;
-  &-bild {
-    display: none;
-  }
-  & h1 {
-    margin-bottom: 0;
-  }
-  & p {
-    text-align: left;
-    margin-bottom: 1.5rem;
-  }
-  & .underlined2 {
-    text-decoration: underline;
-    font-weight: 600;
-  }
-  &__button {
-    color: map-get($colors, secondary-f);
-    background-color: map-get($colors, c-secondary-1);
-    padding: 1rem 2rem;
-    border-radius: 10px;
-    box-shadow: 0px 8px 16px #00000029;
-  }
-}
 
 /* Chronology-Section */
 .chronology {
@@ -398,7 +372,7 @@ source {
       display: none;
     }
   }
-}
+} 
 
 // Wide-Screen
 @media screen and (min-width: 1920px) {
@@ -425,36 +399,6 @@ source {
     display: none;
   }
 
-  /* Anniversary-Section */
-  .anniversary {
-    margin-top: 15rem;
-    padding-right: 0;
-    padding-bottom: 0;
-    width: 100%;
-    & h3 {
-      font-size: map-get($fontSize, fs-secondary-h3);
-    }
-    & p {
-      font-size: 1.3rem;
-    }
-    &-bild {
-      display: flex;
-    }
-    &-info {
-      display: flex;
-      margin-top: 2rem;
-    }
-    & .info-p {
-      margin: 0;
-    }
-    & .center {
-      display: block;
-      margin: 5rem auto;
-    }
-    & .info {
-      margin-right: 10rem;
-    }
-  }
 
   /* Chronology-Section */
   .chronology {

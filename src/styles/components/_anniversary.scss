@@ -1,0 +1,65 @@
+.anniversary {
+  display: grid;
+  text-align: center;
+  padding: 0 8rem;
+  @media screen and (min-width: 1280px) {
+    padding-right: 0;
+  }
+  @media screen and (min-width: 1920px) {
+    padding-right: 0;
+    margin-top: 15rem;
+    // width: 100%;
+  }
+  &-bild {
+    display: none;
+    @media screen and (min-width: 1280px) {
+      display: flex;
+      width: 100%;
+    }
+  }
+  &-info {
+    @media screen and (min-width: 1280px) {
+      display: flex;
+      margin-top: 2rem;
+    }
+  }
+  & .center {
+    @media screen and (min-width: 1920px) {
+      display: block;
+      margin: 5rem auto;
+    }
+  }
+  & .info {
+    @media screen and (min-width: 1920px) {
+      margin-right: 10rem;
+    }
+  }
+  & .info-p {
+    @media screen and (min-width: 1920px) {
+      margin: 0;
+    }
+  }
+  & h1 {
+    margin-bottom: 0;
+  }
+  & h3 {
+    color: inherit;
+    font-size: map-get($fontSize, fs-secondary-h3);
+  }
+  & p {
+    color: inherit;
+    text-align: left;
+    margin-bottom: 1.5rem;
+  }
+  & .underlined2 {
+    text-decoration: underline;
+    font-weight: 600;
+  }
+  &__button {
+    color: map-get($colors, secondary-f);
+    background-color: map-get($colors, c-secondary-1);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px #00000029;
+  }
+}
