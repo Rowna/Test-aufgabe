@@ -5,6 +5,7 @@
 @import "layout/header";
 @import "layout/footer";
 @import "components/buttons";
+@import "components/main-hero";
 
 @import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rancho&family=Roboto:wght@900&display=swap");
@@ -82,105 +83,6 @@ source {
   padding: 1rem $global-p-m;
   // width: 90%;
 }
-
-.main-hero {
-  & .tns-horizontal.tns-subpixel > .tns-item {
-    vertical-align: baseline;
-  }
-  & .tns-nav {
-    position: absolute;
-    top: 93%;
-    left: 32%;
-    & > button {
-      display: inline-block;
-      width: 70px;
-      height: 8px;
-      margin: 5px;
-      background-color: map-get($colors, primary-f);
-    }
-  }
-  & .scroll {
-    z-index: 10000;
-    position: absolute;
-    top: 90%;
-    // top: 40.5em;
-    // bottom: 5em;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0 5rem;
-    & > svg {
-      cursor: pointer;
-    }
-  }
-  & .hero__info {
-    margin-top: 3rem;
-    padding: 0 5rem;
-    position: absolute;
-    z-index: 1000;
-    &-a,
-    & .hero-h4,
-    & .center {
-      display: none;
-    }
-    & h1,
-    & h2,
-    & h3 {
-      width: 60%;
-      text-align: left;
-    }
-  }
-}
-/* Hero-Section 
-.hero {
-  display: grid;
-  overflow: hidden;
-  &__background {
-    position: relative;
-    & img {
-      width: 100%;
-      object-fit: fill;
-    }
-  }
-  &__container {
-    position: relative;
-    // position: absolute;
-    color: map-get($colors, primary-f);
-    grid-area: 1 / 1;
-    // transform: translate(0em, 6.1em);
-    // right: 8em;
-    left: 0;
-    // display: flex;
-    // flex-direction: column;
-    & h1 {
-      text-align: left;
-      width: 50%;
-    }
-  }
-  & .hero-infos a {
-    display: none;
-  }
-  & h3 {
-    text-align: left;
-  }
-  & h4 {
-    display: none;
-  }
-  & .hero-infos {
-    grid-area: 1 / 1;
-    position: absolute;
-    top: 20px;
-    // left: 4rem;
-  }
-  // &__bild {
-  //   width: 100%;
-  //   height: 100%;
-  //   object-fit: cover;
-  //   object-position: center;
-  //   grid-area: 1 / 1;
-  // }
-}
-*/
 
 
 /* Anniversary-Section */
@@ -459,87 +361,13 @@ source {
 }
 
 // tablet, landscape iPad, lo-res laptops ands desktops
-@media (min-width: 960px) {
-  .main-hero {
-    & .tns-horizontal.tns-subpixel > .tns-item {
-      vertical-align: baseline;
-    }
-    & .tns-outer {
-      height: 650px;
-      position: relative;
-      top: -1rem;
-    }
-    & .tns-ovh {
-      height: 700px;
-    }
-    & .tns-horizontal.tns-subpixel > .tns-item {
-      vertical-align: top;
-    }
-    & .tns-nav {
-      position: absolute;
-      top: 96%;
-      left: 30%;
-      & > button {
-        display: inline-block;
-        width: 80px;
-        height: 5px;
-        margin: 5px;
-        background-color: map-get($colors, secondary-f);
-      }
-    }
-    & .hero__info {
-      & h1,
-      & h2,
-      & h3 {
-        color: map-get($colors, secondary-f);
-      }
-    }
-    & .scroll {
-      top: 64%;
-      padding: 0 5rem;
-      & .left,
-      & .right {
-        fill: map-get($colors, secondary-f);
-      }
-    }
-  }
-}
+// @media (min-width: 960px) {
+
+// }
 
 // Big landscape tablets, laptops, and desktops
 @media screen and (min-width: 1025px) {
-  .main-hero {
-    & .tns-outer {
-      position: relative;
-      top: -1rem;
-    }
-    & .tns-nav {
-      top: 90%;
-      left: 33%;
-    }
-    & .tns-horizontal.tns-subpixel > .tns-item {
-      vertical-align: top;
-    }
-    & .scroll {
-      top: 60%;
-      padding: 0 5rem;
-      & .left,
-      & .right {
-        fill: map-get($colors, secondary-f);
-      }
-    }
-    & .hero__info {
-      & h1,
-      & h2,
-      & h3 {
-        color: map-get($colors, secondary-f);
-      }
-      & h3 {
-        position: absolute;
-        top: 48%;
-        left: 40%;
-      }
-    }
-  }
+
   .services {
     & h2 {
       text-align: center;
@@ -577,6 +405,7 @@ source {
   .section {
     padding: 0 $global-p;
   }
+
   h1 {
     font-size: map-get($fontSize, fs-secondary-h1);
   }
@@ -596,55 +425,6 @@ source {
     display: none;
   }
 
-  .main-hero {
-    & .tns-ovh {
-      height: 850px;
-    }
-    & .tns-nav {
-      top: 122%;
-      left: 40%;
-    }
-    & .scroll {
-      top: 80%;
-      padding: 0 5rem;
-      & .left,
-      & .right {
-        fill: map-get($colors, secondary-f);
-      }
-    }
-    & .hero__info {
-      margin-top: 1rem;
-
-      & .hero-h4,
-      & .center {
-        width: 30%;
-        display: block;
-      }
-      & .btn {
-        // width: fit-content;
-        margin: 0;
-        padding: 0;
-        box-shadow: 0px 8px 16px #00000029;
-        font-weight: 900;
-        border-radius: 10px;
-        background-color: map-get($colors, secondary-f);
-        border: solid 25px map-get($colors, secondary-f);
-        letter-spacing: 1px;
-      }
-      & h3 {
-        // position: absolute;
-        top: 46%;
-        left: 23%;
-      }
-      & h1,
-      & h2,
-      & h3,
-      & h4 {
-        text-align: left;
-        color: map-get($colors, secondary-f);
-      }
-    }
-  }
   /* Anniversary-Section */
   .anniversary {
     margin-top: 15rem;
