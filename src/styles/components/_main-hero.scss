@@ -1,4 +1,5 @@
 .main-hero {
+  position: relative;
   z-index: 450;
   & .tns-horizontal.tns-subpixel > .tns-item {
     vertical-align: baseline;
@@ -7,6 +8,7 @@
     }
   }
   & .tns-nav {
+    // position: relative;
     position: absolute;
     top: 93%;
     left: 32%;
@@ -36,7 +38,7 @@
   }
   & .scroll {
     z-index: 450;
-    top: 90%;
+    bottom: 4.5rem;
     position: absolute;
     display: flex;
     justify-content: space-between;
@@ -46,20 +48,16 @@
       cursor: pointer;
     }
     @media (min-width: 960px) {
-      top: 60%;
-      padding: 0 5rem;
-      & .left,
-      & .right {
-        fill: map-get($colors, secondary-f);
-      }
+      // bottom: 4.5rem;
+      // padding: 0 5rem;
+      fill: map-get($colors, secondary-f);
     }
-
     @media screen and (min-width: 1920px) {
-      top: 76%;
-      padding: 0 5rem;
+      bottom: -4.5rem;
+      // padding: 0 5rem;
+      fill: map-get($colors, secondary-f);
     }
   }
-
   & .hero__info {
     margin-top: 3rem;
     padding: 0 5rem;
@@ -74,12 +72,10 @@
         display: block;
       }
     }
-
     & h1,
     & h2,
     & h3,
     & .hero-h4 {
-      //   width: 60%;
       text-align: left;
       @media (min-width: 960px) {
         color: map-get($colors, secondary-f);
@@ -107,7 +103,6 @@
       }
     }
   }
-
   @media (min-width: 960px) {
     & .tns-outer {
       height: 650px;
