@@ -96,6 +96,7 @@
     }
   }
   & .shoe-info__p {
+    color: inherit;
     display: none;
     @media screen and (min-width: 1025px) {
       display: block;

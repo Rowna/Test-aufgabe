@@ -1,0 +1,97 @@
+.words {
+  overflow-x: hidden;
+  width: 100%;
+  & .words__infos {
+    text-align: center;
+    margin: 0 auto;
+  }
+  & .words-title {
+    margin: 0 auto;
+    font: normal map-get($fontSize, fs-primary-h1) map-get($fonts, ff-h1);
+    @media screen and (min-width: 1025px) {
+      text-align: center;
+      //   margin: 0 auto;
+      color: inherit;
+    }
+  }
+  & .words-untertitle {
+    @media screen and (min-width: 1025px) {
+      display: none;
+    }
+  }
+  & .words-kunde {
+    @media screen and (min-width: 1920px) {
+      text-align: left;
+    }
+  }
+  &__container {
+    margin-bottom: 4rem;
+  }
+  & .words__items {
+    border-left: none;
+    // padding: 20px 6rem;
+    list-style-type: none;
+    @media screen and (min-width: 1920px) {
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, max-content);
+      gap: 3rem;
+    }
+  }
+  & .words__item {
+    position: relative;
+    @media screen and (min-width: 1920px) {
+      width: 100%;
+      height: fit-content;
+    }
+    &--large {
+      grid-row: 1 / -1;
+    }
+  }
+  & .words__div {
+    background-color: rgb(235, 231, 231);
+    padding: 1rem 1.5rem;
+    margin: 6rem 3rem;
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      background-color: rgb(235, 231, 231);
+      height: 42px;
+      width: 100px;
+      right: 110px;
+      bottom: -39px;
+      clip-path: polygon(50% 100%, 0 0, 100% 0);
+    }
+    &::before {
+      font-weight: bold;
+      content: "„";
+      // content: open-quote;
+      display: block;
+      position: absolute;
+      font-size: 6rem;
+      color: map-get($colors, c-secondary-1);
+      top: -95px;
+      right: 100px;
+    }
+    @media screen and (min-width: 1920px) {
+      margin: 0 0;
+      //   padding: 0;
+      &::after {
+        height: 65px;
+        width: 200px;
+        right: 40px;
+      }
+      &::before {
+        bottom: 0;
+        right: 50px;
+      }
+    }
+  }
+  & .words__p {
+    @media screen and (min-width: 1920px) {
+        padding: 2rem;
+    }
+  }
+}
