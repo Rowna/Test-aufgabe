@@ -1,6 +1,9 @@
 .main-hero {
   position: relative;
   z-index: 450;
+  & .hero__info-title {
+    width: 70%;
+  }
   & .tns-horizontal.tns-subpixel > .tns-item {
     vertical-align: baseline;
     @media (min-width: 960px) {

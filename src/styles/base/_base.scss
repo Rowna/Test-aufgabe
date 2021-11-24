@@ -1,0 +1,89 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
+  // width: 100%;
+}
+body {
+  text-align: left;
+  margin: 0;
+  width: 100%;
+}
+main {
+  max-width: 100%;
+  // max-height: auto;
+}
+
+img {
+  width: 100%;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-family: map-get($fonts, ff-h1);
+  font-size: map-get($fontSize, fs-primary-h1);
+  font-weight: normal;
+  text-align: center;
+  color: inherit;
+  @media screen and (min-width: 1920px) {
+    font-size: map-get($fontSize, fs-secondary-h1);
+  }
+}
+h2 {
+  font-family: map-get($fonts, ff-h2);
+  width: 35%;
+  // color: inherit;
+  @media screen and (min-width: 1920px) {
+    color: map-get($colors, c-secondary-1);
+    font-size: 2rem;
+  }
+}
+h3 {
+  // font-family: map-get($fonts, ff-secondary);
+  color: inherit;
+  font-family: map-get($fonts, ff-primary);
+  font-weight: 400;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  @media screen and (min-width: 1920px) {
+    color: map-get($colors, c-secondary-1);
+    font-size: 1rem;
+  }
+}
+h4 {
+  font-family: map-get($fonts, ff-primary);
+  font-size: 1.5rem;
+  color: inherit;
+  text-align: center;
+}
+p {
+  font-family: map-get($fonts, ff-primary);
+  @media screen and (min-width: 1920px) {
+    font-size: 1.2rem;
+    color: map-get($colors, c-secondary-1);
+  }
+}
+picture,
+source {
+  display: contents;
+}
+
+.section {
+  padding: 1rem $global-p-m;
+  @media screen and (min-width: 1920px) {
+    padding: 0 $global-p;
+  }
+}
