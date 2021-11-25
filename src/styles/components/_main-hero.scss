@@ -74,7 +74,6 @@
   &__title {
     width: 100%;
     text-align: left;
-
     @media screen and (min-width: 960px) {
       margin-bottom: 0;
       color: map-get($colors, secondary-f);
@@ -82,7 +81,7 @@
     }
   }
   &__subtitle {
-    // text-align: left;
+    width: 100%;
     @media (min-width: 960px) {
       color: map-get($colors, secondary-f);
       margin-bottom: 0;
