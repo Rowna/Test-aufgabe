@@ -3,6 +3,7 @@
   @media screen and (min-width: 1025px) {
     padding-bottom: 1rem;
   }
+
   &__title {
     width: 100%;
     font-family: map-get($fonts, ff-h1);
@@ -15,6 +16,7 @@
       text-align: left;
     }
   }
+
   &__subtitle {
     color: inherit;
     @media screen and (min-width: 1920px) {
@@ -22,18 +24,21 @@
       text-align: left;
     }
   }
+
   &__container {
     @media screen and (min-width: 1920px) {
       display: flex;
       justify-content: space-between;
     }
   }
+
   &__img {
     @media screen and (min-width: 1920px) {
       width: 40%;
       margin-right: 4rem;
     }
   }
+
   &-img_p {
     color: inherit;
     text-align: center;
@@ -42,6 +47,7 @@
       text-align: left;
     }
   }
+
   &__items {
     list-style: none;
     counter-reset: mycounter;
@@ -59,6 +65,7 @@
       width: 100%;
     }
   }
+
   &__item {
     position: relative;
     // margin-left: 30px;
@@ -85,6 +92,7 @@
       font-weight: bold;
     }
   }
+
   &-info__a {
     display: block;
     @media screen and (min-width: 1025px) {
@@ -94,6 +102,7 @@
       display: none;
     }
   }
+  
   &-info__p {
     color: inherit;
     display: none;

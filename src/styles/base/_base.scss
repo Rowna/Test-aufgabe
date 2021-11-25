@@ -29,53 +29,44 @@ a {
   color: inherit;
 }
 
-h1 {
-  font-family: map-get($fonts, ff-h1);
-  font-size: map-get($fontSize, fs-primary-h1);
-  font-weight: normal;
-  text-align: center;
-
-  @media screen and (min-width: 1920px) {
-    font-size: map-get($fontSize, fs-secondary-h1);
+.fs {
+  &--title {
+    font-size: 3.5rem;
+    @media (min-width: 1028px) {
+      font-size: 5rem;
+    }
   }
-}
-
-h2 {
-  font-family: map-get($fonts, ff-h2);
-  width: 35%;
-
-  @media screen and (min-width: 1920px) {
-    color: map-get($colors, c-secondary-1);
-    font-size: 2rem;
-  }
-}
-
-h3 {
-  // font-family: map-get($fonts, ff-secondary);
-  font-family: map-get($fonts, ff-primary);
-  font-weight: 400;
-  margin-bottom: 2.5rem;
-  text-align: center;
-  
-  @media screen and (min-width: 1920px) {
-    color: map-get($colors, c-secondary-1);
+  &--text {
     font-size: 1rem;
+    @media (min-width: 1028px) {
+      font-size: 1.3rem;
+    }
   }
 }
 
-h4 {
-  font-family: map-get($fonts, ff-primary);
-  font-size: 1.5rem;
-  text-align: center;
-}
+// h2 {
+//   font-family: map-get($fonts, ff-h2);
+//   width: 35%;
 
-p {
-  font-family: map-get($fonts, ff-primary);
-  @media screen and (min-width: 1920px) {
-    font-size: 1.2rem;
-    color: map-get($colors, c-secondary-1);
-  }
-}
+//   @media screen and (min-width: 1920px) {
+//     color: map-get($colors, c-secondary-1);
+//     font-size: 2rem;
+//   }
+// }
+
+// h4 {
+  // font-family: map-get($fonts, ff-primary);
+  // font-size: 1.5rem;
+  // text-align: center;
+// }
+
+// p {
+//   font-family: map-get($fonts, ff-primary);
+
+//   @media screen and (min-width: 1920px) {
+//     font-size: 1.2rem;
+//   }
+// }
 
 picture,
 source {
@@ -83,7 +74,8 @@ source {
 }
 
 .section {
-  padding: 1rem $global-p-m;
+  padding: 0 $global-p-m;
+
   @media screen and (min-width: 1920px) {
     padding: 0 $global-p;
   }

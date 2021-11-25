@@ -2,56 +2,68 @@
   display: grid;
   text-align: center;
   padding: 0 8rem;
+  margin-top: 2rem;
+
   @media screen and (min-width: 1280px) {
     padding-right: 0;
   }
+
   @media screen and (min-width: 1920px) {
     padding-right: 0;
     margin-top: 15rem;
     // width: 100%;
   }
+
   &__title {
     font: normal map-get($fontSize, fs-primary-h1) map-get($fonts, ff-h1);
     margin-bottom: 0;
-    color: inherit;
+    // color: inherit;
     width: 100%;
   }
+
   &__subtitle {
-    color: inherit;
+    // color: inherit;
     font-size: map-get($fontSize, fs-secondary-h3);
   }
+
   &__container {
     @media screen and (min-width: 1280px) {
       display: flex;
       margin-top: 2rem;
     }
   }
+
   &__info {
     width: 100%;
   }
+
   &__info-p {
     width: 100%;
     color: inherit;
     text-align: left;
     margin-top: 1.5rem;
+
     @media screen and (min-width: 1280px) {
       margin: 0;
       padding-right: 2rem;
     }
-    @media screen and (min-width: 2100px) {
-      padding-right: 6rem;
-    }
   }
+
   &__underlined2 {
     text-decoration: underline;
     font-weight: 600;
   }
+
   & .center {
+    text-align: left;
+    width: fit-content;
+    margin: 4rem 0;
     @media screen and (min-width: 1920px) {
       display: block;
-      margin: 5rem auto;
+      // margin: 5rem auto;
     }
   }
+
   &__button {
     // text-align: left;
     color: map-get($colors, secondary-f);
@@ -60,6 +72,7 @@
     border-radius: 10px;
     box-shadow: 0px 8px 16px #00000029;
   }
+
   &__img {
     display: none;
     // width: 50%;
@@ -68,9 +81,6 @@
       width: 70%;
     }
     @media screen and (min-width: 1920px) {
-      width: 50%;
-    }
-    @media screen and (min-width: 2100px) {
       width: 50%;
     }
   }

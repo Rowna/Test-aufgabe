@@ -8,6 +8,7 @@
       vertical-align: top;
     }
   }
+
   & .tns-nav {
     // position: relative;
     position: absolute;
@@ -37,6 +38,7 @@
       left: 39%;
     }
   }
+
   &__scroll {
     z-index: 450;
     bottom: 4.5rem;
@@ -49,72 +51,80 @@
       cursor: pointer;
     }
     @media (min-width: 960px) {
-      // bottom: 4.5rem;
-      // padding: 0 5rem;
       fill: map-get($colors, secondary-f);
     }
     @media screen and (min-width: 1920px) {
       bottom: -4.5rem;
-      // padding: 0 5rem;
       fill: map-get($colors, secondary-f);
     }
   }
+
   &__info {
-    margin-top: 3rem;
-    padding: 0 5rem;
+    padding: 2rem 0 0 5rem;
     position: absolute;
     z-index: 450;
-    width: 50%;
-    text-align: left;
+    width: 60%;
     @media screen and (min-width: 1920px) {
-      // width: 40%;
-      margin-top: 0;
+      width: 30%;
     }
   }
-  &__title {
-    width: 100%;
-    text-align: left;
-    @media screen and (min-width: 960px) {
-      margin-bottom: 0;
-      color: map-get($colors, secondary-f);
 
+  &__title {
+    position: relative;
+    @extend .fs--title;
+    font-family: map-get($fonts, ff-h1);
+    @media screen and (min-width: 960px) {
+      margin: 0;
+      color: map-get($colors, secondary-f);
     }
   }
+
   &__subtitle {
-    width: 100%;
+    width: fit-content;
+    font-family: 'Nunito';
+    font-weight: 400;
     @media (min-width: 960px) {
       color: map-get($colors, secondary-f);
       margin-bottom: 0;
     }
   }
-  &__subtitle3 {
-    text-align: left;
-    @media (min-width: 960px) {
-      color: map-get($colors, secondary-f);
-      margin-bottom: 0;
-    }
+  &__title-a {
+    display: block;
+    position: absolute;
+    font-family: 'Nunito';
+    font-weight: 200;
+    bottom: -100%;
+    @extend .fs--text;
     @media screen and (min-width: 1025px) {
-      top: 48%;
-      left: 43%;
+      position: relative;
+      display: inline-block;
+      font-size: 1rem;
     }
   }
+
   &__subtitle4 {
     display: none;
+    @extend .fs--text;
     @media screen and (min-width: 1920px) {
-      text-align: left;
-      width: 100%;
+      // text-align: left;
+      font-weight: normal;
+      width: fit-content;
       display: block;
       margin-bottom: 0;
+      font-family: map-get($fonts, ff-primary);
       color: map-get($colors, secondary-f);
     }
   }
+
   & .center {
     display: none;
+    width: fit-content;
     @media screen and (min-width: 1920px) {
-      width: 100%;
+      margin: 4rem 0;
       display: block;
     }
   }
+
   & .btn {
     @media screen and (min-width: 1920px) {
       margin: 0;
@@ -127,6 +137,7 @@
       letter-spacing: 1px;
     }
   }
+
   @media (min-width: 960px) {
     & .tns-outer {
       height: 650px;
