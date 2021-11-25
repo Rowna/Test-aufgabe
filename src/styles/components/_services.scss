@@ -2,7 +2,17 @@
   background-color: whitesmoke;
   // text-align: center;
   margin: 0 auto;
-  &__container {
+  &__title {
+    color: inherit;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    font: normal map-get($fontSize, fs-primary-h1) map-get($fonts, ff-h1);
+    @media screen and (min-width: 1920px) {
+      padding: 3rem;
+    }
+  }
+  &__items {
     display: flex;
     flex-direction: column;
     padding: 0 2rem;
@@ -11,53 +21,52 @@
       justify-content: space-between;
       gap: 50px;
     }
-    & .box {
-      width: 100%;
-      background-color: white;
-      margin: 1.5rem 0;
-      padding: 1rem;
-      border-radius: 15px;
-      box-shadow: 0px 8px 16px #00000029;
-      @media screen and (min-width: 1920px) {
-        padding: 3rem;
-      }
+  }
+  &__item {
+    width: 100%;
+    background-color: white;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px #00000029;
+    @media screen and (min-width: 1920px) {
+      padding: 3rem;
     }
-    & .box_title {
+  }
+  &__item-title {
+    text-align: center;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    @media screen and (min-width: 1025px) {
       text-align: center;
-      margin: 0 auto;
-      padding: 1.5rem 0;
-      @media screen and (min-width: 1025px) {
-        text-align: center;
-        padding: 2rem 0;
-      }
-      @media screen and (min-width: 1920px) {
-        color: inherit;
-        text-align: center;
-        margin-bottom: 2rem;
-      }
+      padding: 2rem 0;
     }
-    & .box_info {
-      font-size: 1.3em;
-      padding: 0 1.5rem;
-      margin-top: 0;
-      @media screen and (min-width: 1280px) {
-        font-size: 1.5rem;
-        padding: 1rem 2rem;
-      }
-      @media screen and (min-width: 1920px) {
-        color: inherit;
-        padding: 0.3rem;
-      }
+    @media screen and (min-width: 1920px) {
+      color: inherit;
+      text-align: center;
+      margin-bottom: 2rem;
     }
-
-    & .box_img {
-      background-color: #efebe9;
-      // border: 2px solid #424242;
-      width: 128px;
-      height: 128px;
-      margin: 0 auto;
-      padding: 0 auto;
-      border-radius: 50%;
+  }
+  &__item-info {
+    font-size: 1.3em;
+    padding: 0 1.5rem;
+    margin-top: 0;
+    @media screen and (min-width: 1280px) {
+      font-size: 1.5rem;
+      padding: 1rem 2rem;
     }
+    @media screen and (min-width: 1920px) {
+      color: inherit;
+      padding: 0.3rem;
+    }
+  }
+  &__item-img {
+    background-color: #efebe9;
+    // border: 2px solid #424242;
+    width: 128px;
+    height: 128px;
+    margin: 0 auto;
+    padding: 0 auto;
+    border-radius: 50%;
   }
 }

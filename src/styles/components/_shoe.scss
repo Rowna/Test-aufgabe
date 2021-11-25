@@ -3,7 +3,7 @@
   @media screen and (min-width: 1025px) {
     padding-bottom: 1rem;
   }
-  & .shoe-title {
+  &__title {
     width: 100%;
     font-family: map-get($fonts, ff-h1);
     font-size: 3rem;
@@ -15,22 +15,8 @@
       text-align: left;
     }
   }
-  & .shoe-untertitle {
+  &__untertitle {
     color: inherit;
-    @media screen and (min-width: 1920px) {
-      margin-top: 0;
-      text-align: left;
-    }
-  }
-  & .shoe-img {
-    @media screen and (min-width: 1920px) {
-      width: 40%;
-      margin-right: 4rem;
-    }
-  }
-  & .shoe-img_p {
-    color: inherit;
-    text-align: center;
     @media screen and (min-width: 1920px) {
       margin-top: 0;
       text-align: left;
@@ -42,8 +28,21 @@
       justify-content: space-between;
     }
   }
-
-  & .shoe-list {
+  &__img {
+    @media screen and (min-width: 1920px) {
+      width: 40%;
+      margin-right: 4rem;
+    }
+  }
+  &-img_p {
+    color: inherit;
+    text-align: center;
+    @media screen and (min-width: 1920px) {
+      margin-top: 0;
+      text-align: left;
+    }
+  }
+  &__items {
     list-style: none;
     counter-reset: mycounter;
     padding: 0;
@@ -60,7 +59,7 @@
       width: 100%;
     }
   }
-  & .shoe-list li {
+  &__item {
     position: relative;
     // margin-left: 30px;
     font-family: map-get($fonts, ff-primary);
@@ -86,7 +85,7 @@
       font-weight: bold;
     }
   }
-  & .shoe-info__a {
+  &-info__a {
     display: block;
     @media screen and (min-width: 1025px) {
       display: none;
@@ -95,7 +94,7 @@
       display: none;
     }
   }
-  & .shoe-info__p {
+  &-info__p {
     color: inherit;
     display: none;
     @media screen and (min-width: 1025px) {
