@@ -1,11 +1,11 @@
 .words {
   overflow-x: hidden;
   width: 100%;
-  &__infos {
-    text-align: center;
-    margin: 0 auto;
-  }
-  &-title {
+  // &__infos {
+  //   text-align: center;
+  //   margin: 0 auto;
+  // }
+  &__title {
     margin: 0 auto;
     font: normal map-get($fontSize, fs-primary-h1) map-get($fonts, ff-h1);
     @media screen and (min-width: 1025px) {
@@ -14,19 +14,17 @@
       color: inherit;
     }
   }
-  &-untertitle {
+  &__subtitle {
+    margin-top: 0;
     @media screen and (min-width: 1025px) {
       display: none;
     }
   }
-  &-kunde {
+  &__subtitle2 {
     @media screen and (min-width: 1920px) {
       text-align: center;
       margin: 4rem;
     }
-  }
-  &__container {
-    margin-bottom: 4rem;
   }
   &__items {
     border-left: none;

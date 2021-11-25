@@ -10,6 +10,16 @@
     margin-top: 15rem;
     // width: 100%;
   }
+  &__title {
+    font: normal map-get($fontSize, fs-primary-h1) map-get($fonts, ff-h1);
+    margin-bottom: 0;
+    color: inherit;
+    width: 100%;
+  }
+  &__subtitle {
+    color: inherit;
+    font-size: map-get($fontSize, fs-secondary-h3);
+  }
   &-bild {
     display: none;
     @media screen and (min-width: 1280px) {
@@ -37,13 +47,6 @@
       margin: 0;
       width: 90%;
     }
-  }
-  & h1 {
-    margin-bottom: 0;
-  }
-  & h3 {
-    color: inherit;
-    font-size: map-get($fontSize, fs-secondary-h3);
   }
   & p {
     color: inherit;
