@@ -20,21 +20,31 @@
     color: inherit;
     font-size: map-get($fontSize, fs-secondary-h3);
   }
-  &-bild {
-    display: none;
-    @media screen and (min-width: 1280px) {
-      display: flex;
-      width: 100%;
-    }
-    @media screen and (min-width: 2200px) {
-      width: 90%;
-    }
-  }
-  &-info {
+  &__container {
     @media screen and (min-width: 1280px) {
       display: flex;
       margin-top: 2rem;
     }
+  }
+  &__info {
+    width: 100%;
+  }
+  &__info-p {
+    width: 100%;
+    color: inherit;
+    text-align: left;
+    margin-top: 1.5rem;
+    @media screen and (min-width: 1280px) {
+      margin: 0;
+      padding-right: 2rem;
+    }
+    @media screen and (min-width: 2100px) {
+      padding-right: 6rem;
+    }
+  }
+  &__underlined2 {
+    text-decoration: underline;
+    font-weight: 600;
   }
   & .center {
     @media screen and (min-width: 1920px) {
@@ -42,26 +52,26 @@
       margin: 5rem auto;
     }
   }
-  & .info-p {
-    @media screen and (min-width: 1920px) {
-      margin: 0;
-      width: 90%;
-    }
-  }
-  & p {
-    color: inherit;
-    text-align: left;
-    margin-bottom: 1.5rem;
-  }
-  & .underlined2 {
-    text-decoration: underline;
-    font-weight: 600;
-  }
   &__button {
+    // text-align: left;
     color: map-get($colors, secondary-f);
     background-color: map-get($colors, c-secondary-1);
     padding: 1rem 2rem;
     border-radius: 10px;
     box-shadow: 0px 8px 16px #00000029;
+  }
+  &__img {
+    display: none;
+    // width: 50%;
+    @media screen and (min-width: 1280px) {
+      display: block;
+      width: 70%;
+    }
+    @media screen and (min-width: 1920px) {
+      width: 50%;
+    }
+    @media screen and (min-width: 2100px) {
+      width: 50%;
+    }
   }
 }
