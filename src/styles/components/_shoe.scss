@@ -1,27 +1,31 @@
 .shoe {
   background-color: whitesmoke;
+  padding-top: 2rem;
   @media screen and (min-width: 1025px) {
     padding-bottom: 1rem;
   }
-
-  &__title {
-    width: 100%;
-    font-family: map-get($fonts, ff-h1);
-    font-size: 3rem;
+  
+  &__info-container {
     text-align: center;
     @media screen and (min-width: 1920px) {
-      color: inherit;
-      margin: 0;
-      padding-top: 6rem;
       text-align: left;
     }
   }
 
+  &__title {
+    @extend .fs--title;
+    font-family: 'Yellowtail';
+    @media screen and (min-width: 1920px) {
+      margin: 0;
+      padding-top: 6rem;
+    }
+  }
+
   &__subtitle {
-    color: inherit;
+    @extend .fs--text;
+    font-family: 'Nunito';
     @media screen and (min-width: 1920px) {
       margin-top: 0;
-      text-align: left;
     }
   }
 
@@ -39,9 +43,9 @@
     }
   }
 
-  &-img_p {
-    color: inherit;
+  &__img-p {
     text-align: center;
+    font-family: 'Nunito';
     @media screen and (min-width: 1920px) {
       margin-top: 0;
       text-align: left;
@@ -60,21 +64,19 @@
       margin: 0 3rem;
     }
     @media screen and (min-width: 1920px) {
-      //   margin-top: 0;
       margin-bottom: 0;
       width: 100%;
     }
   }
 
   &__item {
+    @extend .fs--text;
     position: relative;
-    // margin-left: 30px;
-    font-family: map-get($fonts, ff-primary);
+    font-family: 'Nunito';
     color: map-get($colors, c-secondary);
     align-items: center;
     padding: 1rem 2rem;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+    margin: 1rem 0;
     &::before {
       content: counter(mycounter) ".";
       counter-increment: mycounter;
@@ -94,7 +96,11 @@
   }
 
   &-info__a {
+    @extend .fs--p;
     display: block;
+    font-family: 'Nunito';
+    padding: 1.8rem 0;
+    color: map-get($colors, c-secondary);
     @media screen and (min-width: 1025px) {
       display: none;
     }
@@ -103,10 +109,11 @@
     }
   }
   
-  &-info__p {
-    color: inherit;
+  &__info-p {
     display: none;
     @media screen and (min-width: 1025px) {
+      font-family: 'Nunito';
+      font-size: 1.3rem;
       display: block;
       margin: 2rem 0;
       padding: 1.2rem;
