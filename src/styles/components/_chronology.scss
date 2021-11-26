@@ -1,40 +1,48 @@
 .chronology {
   white-space: nowrap;
   overflow: hidden;
+  margin-bottom: 3rem;
+
+  &__title {
+    @extend .fs--title;
+    font-family: "Yellowtail";
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
   &__items {
     border-left: 2px solid #ada9a7;
-    // width: 100vw;
-    // height: auto;
-    // font-size: 0;
     padding: 0;
     transition: all 1s;
+
     @media screen and (min-width: 1920px) {
       font-size: 0;
       border-left: none;
       padding: 250px 0;
     }
   }
+
   &__item {
-    width: 100%;
     list-style-type: none;
-    // padding: 10px 10px;
-    // Kreise
+
+    // Die Kreise
     &::before {
       display: block;
       content: "";
       position: relative;
       left: -28px;
-      bottom: 0;
       width: 50px;
       height: 50px;
       background-color: white;
       border: solid 5px map-get($colors, c-secondary-1);
       border-radius: 50%;
     }
+
     @media screen and (min-width: 1920px) {
       position: relative;
       display: inline-block;
       width: 400px;
+      // Die Linie in der Mitte
       height: 2.5px;
       background: #5a5755;
       // Die Kreise ausser der letzte
@@ -48,7 +56,6 @@
         top: 50%;
         // 100 + 1 px kommt genau ein weiteres px weiter, wo die kreise liegen
         left: -19px;
-        bottom: 0;
         width: 50px;
         height: 50px;
         background-color: #fff;
@@ -63,65 +70,50 @@
         // 100% der eigenen Höhe nach oben verschoben
         transform: translateY(-100%);
       }
-      &:nth-child(odd) div::before {
-        top: 100%;
-        border-width: 8px 8px 0 0;
-        border-color: white transparent transparent transparent;
-      }
       &:nth-child(even) div {
         // 16px nach oben positioniert
         top: 30px;
         // 100% der eigenen Höhe nach oben verschoben
         // transform: translateY(-100%);
       }
-      &:nth-child(even) div::before {
-        // top: -20px;
-        border-width: 8px 0 0 8px;
-        // border-color: transparent transparent transparent white;
-      }
     }
   }
+
   &__div {
-    font-family: var(--ff-primary);
-    // width: 100%;
-    margin-left: 3rem;
-    margin-bottom: 2rem;
-    // font-size: 1rem;
+    @extend .fs--p;
+    position: relative;
+    top: -50px;
+    margin: 0 4rem;
+    font-family: "Nunito";
     white-space: normal;
     color: map-get($colors, c-secondary);
+
     @media screen and (min-width: 1920px) {
       position: absolute;
-      // left: 90%;
+      margin: 0;
       left: -20px;
       width: 100%;
       padding: 25px;
-      font-size: 1.2rem;
-      white-space: normal;
-      font-weight: 200;
-      &::before {
-        display: none;
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 0;
-        height: 0;
-        border-style: solid;
-      }
     }
   }
+
   &__time {
+    font-weight: 900;
     @media screen and (min-width: 1920px) {
-      font-weight: 600;
       display: inline-block;
-      margin-bottom: 1rem;
       color: map-get($colors, c-secondary);
-      font-family: map-get($fonts, ff-primary);
+      font-family: "Nunito";
     }
   }
+
+  &__p {
+    margin: 0;
+  }
+
   &__last-item {
-    margin-top: 1rem;
-    font-family: map-get($fonts, ff-primary);
+    @extend .fs--text;
+    margin: 2rem 0;
+    font-family: "Nunito";
     color: map-get($colors, c-secondary);
     @media screen and (min-width: 1920px) {
       display: none;

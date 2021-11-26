@@ -2,51 +2,51 @@
   display: grid;
   text-align: center;
   padding: 0 8rem;
-  margin-top: 2rem;
 
   @media screen and (min-width: 1280px) {
+    overflow: hidden;
     padding-right: 0;
   }
-
   @media screen and (min-width: 1920px) {
+    overflow: hidden;
     padding-right: 0;
-    margin-top: 15rem;
-    // width: 100%;
   }
 
   &__title {
-    font: normal map-get($fontSize, fs-primary-h1) map-get($fonts, ff-h1);
+    @extend .fs--title;
+    font-family: "Yellowtail";
     margin-bottom: 0;
-    // color: inherit;
-    width: 100%;
+    // width: fit-content;
   }
 
   &__subtitle {
-    // color: inherit;
-    font-size: map-get($fontSize, fs-secondary-h3);
+    @extend .fs--text;
   }
 
   &__container {
+    margin-top: 1.5rem;
     @media screen and (min-width: 1280px) {
       display: flex;
-      margin-top: 2rem;
     }
   }
 
   &__info {
-    width: 100%;
+    @media screen and (min-width: 1280px) {
+      padding-left: 1rem;
+    }
+  }
+  
+  &__info-container {
+    @extend .fs--p;
+    font-family: "Nunito";
+    text-align: left;
+    @media screen and (min-width: 1280px) {
+      width: 90%;
+    }
   }
 
   &__info-p {
-    width: 100%;
-    color: inherit;
-    text-align: left;
-    margin-top: 1.5rem;
-
-    @media screen and (min-width: 1280px) {
-      margin: 0;
-      padding-right: 2rem;
-    }
+    margin-top: 0;
   }
 
   &__underlined2 {
@@ -57,15 +57,13 @@
   & .center {
     text-align: left;
     width: fit-content;
-    margin: 4rem 0;
+    margin: 3rem 0;
     @media screen and (min-width: 1920px) {
       display: block;
-      // margin: 5rem auto;
     }
   }
 
   &__button {
-    // text-align: left;
     color: map-get($colors, secondary-f);
     background-color: map-get($colors, c-secondary-1);
     padding: 1rem 2rem;
@@ -73,15 +71,15 @@
     box-shadow: 0px 8px 16px #00000029;
   }
 
-  &__img {
+  &__img-container {
     display: none;
-    // width: 50%;
     @media screen and (min-width: 1280px) {
       display: block;
-      width: 70%;
-    }
-    @media screen and (min-width: 1920px) {
       width: 50%;
     }
+    // @media screen and (min-width: 1920px) {
+    //   width: 90%;
+    // }
   }
+
 }

@@ -9,6 +9,34 @@
     }
   }
 
+  & .tns-outer {
+    // height: 800px;
+    @media screen and (min-width: 960px) {
+      position: relative;
+      height: 650px;
+      top: -1rem;
+    }
+    @media screen and (min-width: 1920px) {
+      height: 850px;
+    }
+  }
+
+  & .tns-inner {
+    // height: 890px;
+    @media screen and (min-width: 1920px) {
+      height: 850px;
+    }
+  }
+
+  & .tns-ovh {
+    @media (min-width: 960px) {
+      height: 700px;
+    }
+    @media screen and (min-width: 1920px) {
+      height: 850px;
+    }
+  }
+
   & .tns-nav {
     // position: relative;
     position: absolute;
@@ -34,19 +62,19 @@
       left: 35%;
     }
     @media screen and (min-width: 1920px) {
-      top: 118%;
+      bottom: 8%;
       left: 39%;
     }
   }
 
   &__scroll {
-    z-index: 450;
-    bottom: 4.5rem;
     position: absolute;
+    z-index: 450;
+    width: 100%;
+    padding: 0 7rem;
+    bottom: 4.5rem;
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    padding: 0 5rem;
     & > svg {
       cursor: pointer;
     }
@@ -54,16 +82,16 @@
       fill: map-get($colors, secondary-f);
     }
     @media screen and (min-width: 1920px) {
-      bottom: -4.5rem;
+      bottom: 10%;
       fill: map-get($colors, secondary-f);
     }
   }
 
   &__info {
-    padding: 2rem 0 0 5rem;
     position: absolute;
     z-index: 450;
     width: 60%;
+    padding: 2rem 0 0 7rem;
     @media screen and (min-width: 1920px) {
       width: 30%;
     }
@@ -81,18 +109,18 @@
 
   &__subtitle {
     width: fit-content;
-    font-family: 'Nunito';
-    font-weight: 400;
+    font-family: "Nunito";
+    @extend .fs--text;
     @media (min-width: 960px) {
       color: map-get($colors, secondary-f);
       margin-bottom: 0;
     }
   }
+
   &__title-a {
     display: block;
     position: absolute;
-    font-family: 'Nunito';
-    font-weight: 200;
+    font-family: "Nunito";
     bottom: -100%;
     @extend .fs--text;
     @media screen and (min-width: 1025px) {
@@ -106,8 +134,6 @@
     display: none;
     @extend .fs--text;
     @media screen and (min-width: 1920px) {
-      // text-align: left;
-      font-weight: normal;
       width: fit-content;
       display: block;
       margin-bottom: 0;
@@ -127,8 +153,7 @@
 
   & .btn {
     @media screen and (min-width: 1920px) {
-      margin: 0;
-      padding: 0;
+      font-family: map-get($fonts, ff-primary);
       box-shadow: 0px 8px 16px #00000029;
       font-weight: 900;
       border-radius: 10px;
@@ -138,17 +163,4 @@
     }
   }
 
-  @media (min-width: 960px) {
-    & .tns-outer {
-      height: 650px;
-      position: relative;
-      top: -1rem;
-    }
-    & .tns-ovh {
-      height: 700px;
-      @media screen and (min-width: 1920px) {
-        height: 850px;
-      }
-    }
-  }
 }
